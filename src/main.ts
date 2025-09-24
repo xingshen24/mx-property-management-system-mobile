@@ -21,7 +21,7 @@ import 'vant/es/toast/style'
 import 'vant/es/dialog/style'
 import 'vant/es/notify/style'
 import 'vant/es/image-preview/style'
-import { Col, Row, Swipe, SwipeItem, Tab, Tabs, Icon, Form, Field, CellGroup, List } from 'vant'
+import { CellGroup, Col, Field, FloatingBubble, Form, Icon, List, Row, Swipe, SwipeItem, Tab, Tabs } from 'vant'
 
 const app = createApp(App)
 const head = createHead()
@@ -30,16 +30,17 @@ app.use(head)
 app.use(router)
 app.use(pinia)
 app.use(i18n)
-app.use(Col);
-app.use(Row);
-app.use(Swipe);
-app.use(SwipeItem);
-app.use(Tab);
-app.use(Tabs);
+app.use(Col)
+app.use(Row)
+app.use(Swipe)
+app.use(SwipeItem)
+app.use(Tab)
+app.use(Tabs)
 app.use(Icon)
 app.use(Form)
 app.use(Field)
 app.use(CellGroup)
 app.use(List)
+app.use(FloatingBubble)
 
 app.mount('#app')

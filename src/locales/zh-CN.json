@@ -19,7 +19,9 @@
     "Workbench": "💻 工作台",
     "404": "⚠️ 404 页面",
     "Undefined": "🤷 未定义标题",
-    "MyApproval": "待我审批"
+    "MyApproval": "待我审批",
+    "RequestForApproval": "审批请示",
+    "RequestForApprovalDetail": "请示明细"
   },
   "tabbar": {
     "home": "主页",

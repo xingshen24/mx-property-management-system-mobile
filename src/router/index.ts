@@ -13,9 +13,9 @@ import { Local, REFRESH_TOKEN } from '@/utils/storage'
 NProgress.configure({ showSpinner: true, parent: '#app' })
 
 for (const route of routes) {
-  if (route.path == '/') {
+  if (route.path === '/') {
     route.redirect = '/workbench'
-    break;
+    break
   }
 }
 
@@ -29,14 +29,13 @@ if (import.meta.hot)
   handleHotUpdate(router)
 
 router.beforeEach(async (to: EnhancedRouteLocation, _from, next) => {
-  console.log(to)
   NProgress.start()
 
   const routeCacheStore = useRouteCacheStore()
 
-  const refreshToken = Local.get(REFRESH_TOKEN);
+  const refreshToken = Local.get(REFRESH_TOKEN)
 
-  if (to.path != '/login' && refreshToken == null) {
+  if (to.path !== '/login' && refreshToken == null) {
     next('/login')
     return
   }
@@ -47,7 +46,7 @@ router.beforeEach(async (to: EnhancedRouteLocation, _from, next) => {
   // Set page title
   setPageTitle(to.name)
 
-  next();
+  next()
 })
 
 router.afterEach(() => {

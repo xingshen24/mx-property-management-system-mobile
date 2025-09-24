@@ -1,4 +1,4 @@
-import { Api } from "@/utils/request"
+import { Api } from '@/utils/request'
 
 export interface LoginForm {
   username: string
@@ -16,22 +16,21 @@ export interface UserState {
 }
 
 export interface AccessUser {
-  userId: string;
-  userName: string;
-  roles: string[];
-  accessToken: string;
-  refreshToken: string;
+  userId: string
+  userName: string
+  roles: string[]
+  accessToken: string
+  refreshToken: string
 }
 
 export function doLogin(form: LoginForm): Promise<AccessUser> {
-  const { promise, resolve, reject } = Promise.withResolvers<AccessUser>()
-  Api.req('/login').json(form).public().success(async (data: AccessUser) => {
-    resolve(data)
-  }).fail(error => reject(error))
-    .post();
-  return promise;
+  return new Promise((resolve, reject) => {
+    Api.req('/login').json(form).public().success(async (data: AccessUser) => {
+      resolve(data)
+    }).fail(error => reject(error)).post()
+  })
 }
 
 export function getUserInfo() {
-  return Promise.resolve();
+  return Promise.resolve()
 }

@@ -21,7 +21,7 @@ function setKeywordsAndSearch() {
 function search(reset: boolean) {
   loading.value = true
   const param = { ...form }
-  Api.req('/workflow/query-workflow-task').query(param).success((data: any[]) => {
+  Api.req('/request-for-instruction/query').query(param).success((data: any[]) => {
     data = data ?? []
     if (data.length < param.size) {
       finished.value = true
@@ -44,12 +44,15 @@ function onLoad() {
 <template>
   <van-search v-model="keywords" placeholder="请输入搜索关键词" input-align="center" @search="setKeywordsAndSearch" />
   <van-list v-model:loading="loading" :finished="finished" finished-text="没有更多了" @load="onLoad">
-    <van-cell v-for="item in list" :key="item.id" :title="item.title" />
+    <van-cell
+      v-for="item in list" :key="item.id" :title="item.title" is-link
+      :url="`request-for-instruction/detail?id=${item.id}`"
+    />
   </van-list>
 </template>
 
 <route lang="json5">
 {
-  name: 'MyApproval'
+  name: 'RequestForInstruction'
 }
 </route>

@@ -60,7 +60,6 @@
     "eslint": "^9.35.0",
     "eslint-plugin-format": "^1.0.1",
     "less": "^4.4.1",
-    "lint-staged": "^16.1.6",
     "mockjs": "^1.1.0",
     "postcss-mobile-forever": "^5.0.0",
     "rollup": "^4.50.2",
@@ -99,12 +98,5 @@
   },
   "resolutions": {
     "vite": "^7.1.5"
-  },
-  "simple-git-hooks": {
-    "pre-commit": "pnpm lint-staged",
-    "commit-msg": "pnpm commitlint $1"
-  },
-  "lint-staged": {
-    "*": "eslint --fix"
   }
 }
