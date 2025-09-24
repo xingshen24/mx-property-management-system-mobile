@@ -48,3 +48,6 @@ stats.html
 # Misc
 .DS_Store
 .history
+
+!.vscode/extensions.json
+!.vscode/settings.json
