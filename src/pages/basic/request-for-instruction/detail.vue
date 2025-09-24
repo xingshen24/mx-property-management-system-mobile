@@ -32,10 +32,7 @@ const detail = reactive({
   attachments: <FileAttachment[]>[]
 })
 
-console.log(id)
-
 Api.req('/request-for-instruction/detail-for-view').query({ id }).success(data => {
-  console.log(data)
   coverReactive(detail, data);
 }).get();
 
@@ -65,6 +62,6 @@ Api.req('/request-for-instruction/detail-for-view').query({ id }).success(data =
 </style>
 <route lang="json5">
 {
-  name: 'RequestForInstruction'
+  name: 'RequestForInstructionDetail'
 }
 </route>

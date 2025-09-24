@@ -19,6 +19,8 @@ for (const route of routes) {
   }
 }
 
+console.log(routes)
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.VITE_APP_PUBLIC_PATH),
   routes,
@@ -42,6 +44,8 @@ router.beforeEach(async (to: EnhancedRouteLocation, _from, next) => {
 
   // Route cache
   routeCacheStore.addRoute(to)
+
+  console.log(to)
 
   // Set page title
   setPageTitle(to.name)
