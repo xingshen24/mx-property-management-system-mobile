@@ -2,9 +2,8 @@
   <van-search v-model="keywords" placeholder="请输入搜索关键词" input-align="center" @search="setKeywordsAndSearch" />
   <van-list v-model:loading="loading" :finished="finished" finished-text="没有更多了" @load="onLoad">
     <van-cell v-for="item in list" :key="item.id" :title="item.title" is-link
-      :url="`request-for-instruction/detail?id=${item.id}`" />
+      :url="`target-responsibility-letter/detail?id=${item.id}`" />
   </van-list>
-  <van-floating-bubble axis="lock" icon="plus" @click="newRequestForInstruction" />
 </template>
 
 <script lang="ts" setup>
@@ -30,7 +29,7 @@ function setKeywordsAndSearch() {
 function search(reset: boolean) {
   loading.value = true
   const param = { ...form }
-  Api.req('/request-for-instruction/query').query(param).success((data: any[]) => {
+  Api.req('/target-responsibility-letter/query-mine').query(param).success((data: any[]) => {
     data = data ?? []
     if (data.length < param.size) {
       finished.value = true
@@ -48,14 +47,11 @@ function search(reset: boolean) {
 function onLoad() {
   search(false)
 }
-const router = useRouter();
-const newRequestForInstruction = () => {
-  router.push('/basic/request-for-instruction/form');
-}
+
 </script>
 
 <route lang="json5">
 {
-  name: 'MyRequestForInstruction'
+  name: 'MyTargetResponsibilityLetter'
 }
 </route>

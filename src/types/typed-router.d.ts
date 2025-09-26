@@ -21,9 +21,12 @@ declare module 'vue-router/auto-routes' {
     '/': RouteRecordInfo<'/', '/', Record<never, never>, Record<never, never>>,
     '404': RouteRecordInfo<'404', '/:all(.*)', { all: ParamValue<true> }, { all: ParamValue<false> }>,
     'MyApproval': RouteRecordInfo<'MyApproval', '/basic/approval', Record<never, never>, Record<never, never>>,
-    'RequestForInstruction': RouteRecordInfo<'RequestForInstruction', '/basic/request-for-instruction', Record<never, never>, Record<never, never>>,
-    'RequestForInstructionDetail': RouteRecordInfo<'RequestForInstructionDetail', '/basic/request-for-instruction/detail', Record<never, never>, Record<never, never>>,
-    'RequestForInstructionForm': RouteRecordInfo<'RequestForInstructionForm', '/basic/request-for-instruction/form', Record<never, never>, Record<never, never>>,
+    'MyBudgetReport': RouteRecordInfo<'MyBudgetReport', '/basic/budget-report', Record<never, never>, Record<never, never>>,
+    'MyRequestForInstruction': RouteRecordInfo<'MyRequestForInstruction', '/basic/request-for-instruction', Record<never, never>, Record<never, never>>,
+    'MyRequestForInstructionDetail': RouteRecordInfo<'MyRequestForInstructionDetail', '/basic/request-for-instruction/detail', Record<never, never>, Record<never, never>>,
+    'MyRequestForInstructionForm': RouteRecordInfo<'MyRequestForInstructionForm', '/basic/request-for-instruction/form', Record<never, never>, Record<never, never>>,
+    'MyTargetResponsibilityLetter': RouteRecordInfo<'MyTargetResponsibilityLetter', '/basic/target-responsibility-letter', Record<never, never>, Record<never, never>>,
+    'MyTargetResponsibilityLetterDetail': RouteRecordInfo<'MyTargetResponsibilityLetterDetail', '/basic/target-responsibility-letter/detail', Record<never, never>, Record<never, never>>,
     'Charts': RouteRecordInfo<'Charts', '/charts', Record<never, never>, Record<never, never>>,
     'Counter': RouteRecordInfo<'Counter', '/counter', Record<never, never>, Record<never, never>>,
     'Home': RouteRecordInfo<'Home', '/home', Record<never, never>, Record<never, never>>,
@@ -60,16 +63,28 @@ declare module 'vue-router/auto-routes' {
       routes: 'MyApproval'
       views: never
     }
+    'src/pages/basic/budget-report/index.vue': {
+      routes: 'MyBudgetReport'
+      views: never
+    }
     'src/pages/basic/request-for-instruction/index.vue': {
-      routes: 'RequestForInstruction'
+      routes: 'MyRequestForInstruction'
       views: never
     }
     'src/pages/basic/request-for-instruction/detail.vue': {
-      routes: 'RequestForInstructionDetail'
+      routes: 'MyRequestForInstructionDetail'
       views: never
     }
     'src/pages/basic/request-for-instruction/form.vue': {
-      routes: 'RequestForInstructionForm'
+      routes: 'MyRequestForInstructionForm'
+      views: never
+    }
+    'src/pages/basic/target-responsibility-letter/index.vue': {
+      routes: 'MyTargetResponsibilityLetter'
+      views: never
+    }
+    'src/pages/basic/target-responsibility-letter/detail.vue': {
+      routes: 'MyTargetResponsibilityLetterDetail'
       views: never
     }
     'src/pages/charts/index.vue': {

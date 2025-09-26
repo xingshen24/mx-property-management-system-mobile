@@ -24,22 +24,6 @@ function handleFileClick(file) {
   // 文件预览或打开逻辑
   this.previewFile(file)
 }
-function downloadFile(file) {
-  // 下载逻辑
-  console.log('下载文件:', file.name)
-}
-function previewFile(file) {
-  // 根据文件类型进行预览
-  if (file.type === 'pdf') {
-    this.previewPDF(file)
-  }
-  else if (file.type === 'image') {
-    this.previewImage(file)
-  }
-  else {
-    this.downloadFile(file)
-  }
-}
 </script>
 
 <template>

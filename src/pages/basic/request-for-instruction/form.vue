@@ -53,7 +53,7 @@ const onSubmit = () => {
 </script>
 <route lang="json5">
 {
-  name: 'RequestForInstructionForm'
+  name: 'MyRequestForInstructionForm'
 }
 </route>
 <style lang="scss" scoped>

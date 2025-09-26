@@ -23,8 +23,8 @@ export const useUserStore = defineStore('user', () => {
 
   const info = async () => {
     try {
-      const { data } = await getUserInfo()
-      setInfo(data)
+      await getUserInfo()
+      setInfo({})
     }
     catch (error) {
       clearToken()

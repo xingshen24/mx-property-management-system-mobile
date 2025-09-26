@@ -20,9 +20,11 @@
     "404": "⚠️ 404 页面",
     "Undefined": "🤷 未定义标题",
     "MyApproval": "待我审批",
-    "RequestForInstruction": "审批请示",
-    "RequestForInstructionDetail": "请示明细",
-    "RequestForInstructionForm": "发起请示"
+    "MyRequestForInstruction": "审批请示",
+    "MyRequestForInstructionDetail": "请示明细",
+    "MyRequestForInstructionForm": "发起请示",
+    "MyTargetResponsibilityLetter": "审批请示",
+    "MyTargetResponsibilityLetterDetail": "请示明细"
   },
   "tabbar": {
     "home": "主页",

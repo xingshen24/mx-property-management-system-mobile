@@ -3,10 +3,9 @@
     <div class="data-label data-label-top">基础信息</div>
     <van-cell-group inset>
       <van-cell title="标题" :value="detail.title" />
-      <van-cell title="发起人" :value="detail.submitEmpName" />
-      <van-cell title="提交时间" :value="detail.submitTime" />
-      <van-cell title="状态" :value="detail.approvalState" />
-      <van-cell title="内容" :value="detail.content" />
+      <van-cell title="签订人" :value="detail.signEmpName" />
+      <van-cell title="签订时间" :value="detail.signDate" />
+      <van-cell title="备注" :value="detail.remark" />
     </van-cell-group>
     <div class="data-label data-label-not-top">附件信息</div>
     <file-attachments :files="detail.attachments" />
@@ -17,22 +16,19 @@ import type { FileAttachment } from '@/components/fileAttachments';
 import { coverReactive } from '@/utils/common';
 import { Api } from '@/utils/request';
 
-
 const route = useRoute();
 const id = route.query.id;
 
 const detail = reactive({
   id: <number | null>null,
-  submitEmpId: <number | null>null,
-  submitEmpName: '',
-  submitTime: '',
+  signDate: '',
+  signEmpName: '',
   title: '',
-  content: '',
-  approvalState: <number | null>null,
+  remark: '',
   attachments: <FileAttachment[]>[]
 })
 
-Api.req('/request-for-instruction/detail-for-view').query({ id }).success(data => {
+Api.req('/target-responsibility-letter/detail-for-view').query({ id }).success(data => {
   coverReactive(detail, data);
 }).get();
 
@@ -62,6 +58,6 @@ Api.req('/request-for-instruction/detail-for-view').query({ id }).success(data =
 </style>
 <route lang="json5">
 {
-  name: 'MyRequestForInstructionDetail'
+  name: 'MyTargetResponsibilityLetterDetail'
 }
 </route>
