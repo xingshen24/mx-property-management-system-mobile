@@ -22,6 +22,7 @@ declare module 'vue-router/auto-routes' {
     '404': RouteRecordInfo<'404', '/:all(.*)', { all: ParamValue<true> }, { all: ParamValue<false> }>,
     'MyApproval': RouteRecordInfo<'MyApproval', '/basic/approval', Record<never, never>, Record<never, never>>,
     'MyBudgetReport': RouteRecordInfo<'MyBudgetReport', '/basic/budget-report', Record<never, never>, Record<never, never>>,
+    '/basic/budget-report/form': RouteRecordInfo<'/basic/budget-report/form', '/basic/budget-report/form', Record<never, never>, Record<never, never>>,
     'MyRequestForInstruction': RouteRecordInfo<'MyRequestForInstruction', '/basic/request-for-instruction', Record<never, never>, Record<never, never>>,
     'MyRequestForInstructionDetail': RouteRecordInfo<'MyRequestForInstructionDetail', '/basic/request-for-instruction/detail', Record<never, never>, Record<never, never>>,
     'MyRequestForInstructionForm': RouteRecordInfo<'MyRequestForInstructionForm', '/basic/request-for-instruction/form', Record<never, never>, Record<never, never>>,
@@ -65,6 +66,10 @@ declare module 'vue-router/auto-routes' {
     }
     'src/pages/basic/budget-report/index.vue': {
       routes: 'MyBudgetReport'
+      views: never
+    }
+    'src/pages/basic/budget-report/form.vue': {
+      routes: '/basic/budget-report/form'
       views: never
     }
     'src/pages/basic/request-for-instruction/index.vue': {

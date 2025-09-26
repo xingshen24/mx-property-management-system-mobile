@@ -12,7 +12,7 @@
           </template>
         </van-field>
       </van-cell-group>
-      <van-button round block type="primary" native-type="submit">提交</van-button>
+      <van-button round block type="primary" native-type="submit" style="margin-top: 16px;">提交</van-button>
     </van-form>
   </div>
 </template>

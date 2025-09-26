@@ -116,7 +116,7 @@ function loadPromote() {
 
 const router = useRouter();
 const newBudgetReport = () => {
-  router.push('/basic/request-for-instruction/form');
+  router.push('/basic/budget-report/form');
 }
 </script>
 
