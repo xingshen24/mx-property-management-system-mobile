@@ -23,6 +23,9 @@ declare module 'vue-router/auto-routes' {
     'MyApproval': RouteRecordInfo<'MyApproval', '/basic/approval', Record<never, never>, Record<never, never>>,
     'MyBudgetReport': RouteRecordInfo<'MyBudgetReport', '/basic/budget-report', Record<never, never>, Record<never, never>>,
     'BudgetReportDetail': RouteRecordInfo<'BudgetReportDetail', '/basic/budget-report/detail', Record<never, never>, Record<never, never>>,
+    'MyDocumentBorrow': RouteRecordInfo<'MyDocumentBorrow', '/basic/document-borrow', Record<never, never>, Record<never, never>>,
+    'MyDocumentBorrowDetail': RouteRecordInfo<'MyDocumentBorrowDetail', '/basic/document-borrow/detail', Record<never, never>, Record<never, never>>,
+    'MyDocumentBorrowForm': RouteRecordInfo<'MyDocumentBorrowForm', '/basic/document-borrow/form', Record<never, never>, Record<never, never>>,
     'MyReportFormReport': RouteRecordInfo<'MyReportFormReport', '/basic/report-form-report', Record<never, never>, Record<never, never>>,
     'ReportFormReportDetail': RouteRecordInfo<'ReportFormReportDetail', '/basic/report-form-report/detail', Record<never, never>, Record<never, never>>,
     'MyRequestForInstruction': RouteRecordInfo<'MyRequestForInstruction', '/basic/request-for-instruction', Record<never, never>, Record<never, never>>,
@@ -72,6 +75,18 @@ declare module 'vue-router/auto-routes' {
     }
     'src/pages/basic/budget-report/detail.vue': {
       routes: 'BudgetReportDetail'
+      views: never
+    }
+    'src/pages/basic/document-borrow/index.vue': {
+      routes: 'MyDocumentBorrow'
+      views: never
+    }
+    'src/pages/basic/document-borrow/detail.vue': {
+      routes: 'MyDocumentBorrowDetail'
+      views: never
+    }
+    'src/pages/basic/document-borrow/form.vue': {
+      routes: 'MyDocumentBorrowForm'
       views: never
     }
     'src/pages/basic/report-form-report/index.vue': {
