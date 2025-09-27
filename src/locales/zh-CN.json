@@ -24,7 +24,11 @@
     "MyRequestForInstructionDetail": "请示明细",
     "MyRequestForInstructionForm": "发起请示",
     "MyTargetResponsibilityLetter": "审批请示",
-    "MyTargetResponsibilityLetterDetail": "请示明细"
+    "MyTargetResponsibilityLetterDetail": "请示明细",
+    "MyBudgetReport": "预算报表",
+    "BudgetReportDetail": "报表明细",
+    "MyReportFormReport": "报表列表",
+    "ReportFormReportDetail": "报表明细"
   },
   "tabbar": {
     "home": "主页",

@@ -6,7 +6,7 @@
       <van-list v-model:loading="receive.loading" :finished="receive.finished" finished-text="没有更多了"
         @load="loadReceive">
         <van-cell v-for="item in receive.list" :key="item.id" :title="item.title" is-link
-          :url="`budget-report/detail?id=${item.id}`" />
+          :url="`report-form-report/detail?id=${item.id}`" />
       </van-list>
     </van-tab>
     <van-tab title="我的上报" name="promote">
@@ -15,7 +15,7 @@
       <van-list v-model:loading="promote.loading" :finished="promote.finished" finished-text="没有更多了"
         @load="loadPromote">
         <van-cell v-for="item in promote.list" :key="item.id" :title="item.title" is-link
-          :url="`budget-report/detail?id=${item.id}`" />
+          :url="`report-form-report/detail?id=${item.id}`" />
       </van-list>
     </van-tab>
   </van-tabs>
@@ -72,7 +72,7 @@ function setKeywordsAndSearch(receive: boolean, form: SearchForm, kewords: strin
 function searchReceive(reset: boolean) {
   receive.loading = true
   const param = { ...receiveForm }
-  Api.req('/budget-report/query-receive').query(param).success((data: any[]) => {
+  Api.req('/report-form-report/query-receive').query(param).success((data: any[]) => {
     data = data ?? []
     if (data.length < param.size) {
       receive.finished = true
@@ -90,7 +90,7 @@ function searchReceive(reset: boolean) {
 function searchPromote(reset: boolean) {
   promote.loading = true
   const param = { ...promoteForm }
-  Api.req('/budget-report/query').query(param).success((data: any[]) => {
+  Api.req('/report-form-report/query').query(param).success((data: any[]) => {
     data = data ?? []
     if (data.length < param.size) {
       promote.finished = true
@@ -116,6 +116,6 @@ function loadPromote() {
 
 <route lang="json5">
 {
-  name: 'MyBudgetReport'
+  name: 'MyReportFormReport'
 }
 </route>
