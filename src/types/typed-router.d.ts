@@ -38,8 +38,13 @@ declare module 'vue-router/auto-routes' {
     'Charts': RouteRecordInfo<'Charts', '/charts', Record<never, never>, Record<never, never>>,
     'Counter': RouteRecordInfo<'Counter', '/counter', Record<never, never>, Record<never, never>>,
     'Home': RouteRecordInfo<'Home', '/home', Record<never, never>, Record<never, never>>,
+    'AddressBook': RouteRecordInfo<'AddressBook', '/human-resource/address-book', Record<never, never>, Record<never, never>>,
     'AddressBookDetail': RouteRecordInfo<'AddressBookDetail', '/human-resource/address-book/detail', Record<never, never>, Record<never, never>>,
     'AddressBookForm': RouteRecordInfo<'AddressBookForm', '/human-resource/address-book/form', Record<never, never>, Record<never, never>>,
+    'MyDepartmentAddressBook': RouteRecordInfo<'MyDepartmentAddressBook', '/human-resource/employee', Record<never, never>, Record<never, never>>,
+    'EmployeeDetail': RouteRecordInfo<'EmployeeDetail', '/human-resource/employee/detail', Record<never, never>, Record<never, never>>,
+    'EmployeeContract': RouteRecordInfo<'EmployeeContract', '/human-resource/employee-contract', Record<never, never>, Record<never, never>>,
+    'EmployeeContractDetail': RouteRecordInfo<'EmployeeContractDetail', '/human-resource/employee-contract/detail', Record<never, never>, Record<never, never>>,
     'KeepAlive': RouteRecordInfo<'KeepAlive', '/keepalive', Record<never, never>, Record<never, never>>,
     'Login': RouteRecordInfo<'Login', '/login', Record<never, never>, Record<never, never>>,
     'Mock': RouteRecordInfo<'Mock', '/mock', Record<never, never>, Record<never, never>>,
@@ -141,12 +146,32 @@ declare module 'vue-router/auto-routes' {
       routes: 'Home'
       views: never
     }
+    'src/pages/human-resource/address-book/index.vue': {
+      routes: 'AddressBook'
+      views: never
+    }
     'src/pages/human-resource/address-book/detail.vue': {
       routes: 'AddressBookDetail'
       views: never
     }
     'src/pages/human-resource/address-book/form.vue': {
       routes: 'AddressBookForm'
+      views: never
+    }
+    'src/pages/human-resource/employee/index.vue': {
+      routes: 'MyDepartmentAddressBook'
+      views: never
+    }
+    'src/pages/human-resource/employee/detail.vue': {
+      routes: 'EmployeeDetail'
+      views: never
+    }
+    'src/pages/human-resource/employee-contract/index.vue': {
+      routes: 'EmployeeContract'
+      views: never
+    }
+    'src/pages/human-resource/employee-contract/detail.vue': {
+      routes: 'EmployeeContractDetail'
       views: never
     }
     'src/pages/keepalive/index.vue': {
