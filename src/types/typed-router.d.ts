@@ -39,7 +39,7 @@ declare module 'vue-router/auto-routes' {
     'Counter': RouteRecordInfo<'Counter', '/counter', Record<never, never>, Record<never, never>>,
     'Home': RouteRecordInfo<'Home', '/home', Record<never, never>, Record<never, never>>,
     'AddressBookDetail': RouteRecordInfo<'AddressBookDetail', '/human-resource/address-book/detail', Record<never, never>, Record<never, never>>,
-    '/human-resource/address-book/form': RouteRecordInfo<'/human-resource/address-book/form', '/human-resource/address-book/form', Record<never, never>, Record<never, never>>,
+    'AddressBookForm': RouteRecordInfo<'AddressBookForm', '/human-resource/address-book/form', Record<never, never>, Record<never, never>>,
     'KeepAlive': RouteRecordInfo<'KeepAlive', '/keepalive', Record<never, never>, Record<never, never>>,
     'Login': RouteRecordInfo<'Login', '/login', Record<never, never>, Record<never, never>>,
     'Mock': RouteRecordInfo<'Mock', '/mock', Record<never, never>, Record<never, never>>,
@@ -146,7 +146,7 @@ declare module 'vue-router/auto-routes' {
       views: never
     }
     'src/pages/human-resource/address-book/form.vue': {
-      routes: '/human-resource/address-book/form'
+      routes: 'AddressBookForm'
       views: never
     }
     'src/pages/keepalive/index.vue': {

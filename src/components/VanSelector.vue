@@ -1,7 +1,7 @@
 <template>
-  <van-field v-model="fieldValue" is-link readonly :label="label" :placeholder="placeholder" @click="show = true" />
+  <van-field v-model="fieldValue" is-link readonly :label="label" :placeholder="placeholderText" @click="show = true" />
   <van-popup v-model:show="show" round position="bottom">
-    <van-picker :title="title" :columns="columns" @confirm="onConfirm" @cancel="onCancel" @change="onChange" />
+    <van-picker :title="titleText" :columns="columns" @confirm="onConfirm" @cancel="onCancel" @change="onChange" />
   </van-popup>
 </template>
 <script lang="ts" setup>
@@ -19,7 +19,7 @@ const props = defineProps({
   },
   title: {
     type: String,
-    default: '标题'
+    default: ''
   },
   placeholder: {
     type: String,
@@ -30,6 +30,21 @@ const props = defineProps({
     default: '',
   }
 })
+
+const placeholderText = computed(() => {
+  if (props.placeholder != null && props.placeholder != '') {
+    return props.placeholder;
+  }
+  return `请选择${props.label}`
+})
+
+const titleText = computed(() => {
+  if (props.title != null && props.title != '') {
+    return props.title;
+  }
+  return `请选择${props.label}`
+})
+
 
 const show = ref(false);
 const fieldValue = ref('');

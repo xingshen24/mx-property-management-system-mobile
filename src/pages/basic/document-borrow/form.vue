@@ -6,7 +6,7 @@
         <van-selector v-model="form.documentType" label="借阅类型" title="请选择借阅类型" :state-object="BorrowDocumentType"
           placeholder="请选择借阅类型" />
         <van-field v-model="form.documentName" name="documentName" label="档案名称" placeholder="请输入档案名称"
-          :rules="[{ required: true, message: '请填写档案名称' }]" />
+          :rules="[needInput('档案名称')]" />
         <van-field v-model="form.purpose" type="textarea" name="purpose" label="借阅目的" placeholder="请输入借阅目的"
           :rules="[{ required: true, message: '请填写借阅目的' }]" />
         <van-department v-model="form.lenderDeptId" label="出借部门" placeholder="请选择出借部门" title="请选择出借部门" />
@@ -32,7 +32,7 @@ import { uploadFile } from '@/utils/uploader'
 import { showDialog } from 'vant'
 import { BorrowDocumentType } from './borrow'
 import { stdFormatToDay } from '@/utils/formatTime'
-import { needChoose } from '@/utils/rules'
+import { needChoose, needInput } from '@/utils/rules'
 
 
 const fileList = ref([])

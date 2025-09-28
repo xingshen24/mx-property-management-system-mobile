@@ -4,6 +4,7 @@
     <van-cell v-for="item in list" :key="item.id" :title="empName(item)" is-link
       :url="`/human-resource/address-book/detail?id=${item.id}`" />
   </van-list>
+  <van-floating-bubble axis="lock" icon="plus" @click="newAddressBook" />
 </template>
 
 <script lang="ts" setup>
@@ -50,6 +51,12 @@ function search(reset: boolean) {
 
 function onLoad() {
   search(false)
+}
+
+const router = useRouter();
+
+const newAddressBook = () => {
+  router.push('/human-resource/address-book/form')
 }
 
 </script>
