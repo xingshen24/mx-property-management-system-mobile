@@ -47,6 +47,7 @@ declare module 'vue-router/auto-routes' {
     'EmployeeContractDetail': RouteRecordInfo<'EmployeeContractDetail', '/human-resource/employee-contract/detail', Record<never, never>, Record<never, never>>,
     'PassedCandidateJobEntry': RouteRecordInfo<'PassedCandidateJobEntry', '/human-resource/job-entry', Record<never, never>, Record<never, never>>,
     'PassedCandidateDetail': RouteRecordInfo<'PassedCandidateDetail', '/human-resource/job-entry/detail', Record<never, never>, Record<never, never>>,
+    'PassedCandidatePassProbation': RouteRecordInfo<'PassedCandidatePassProbation', '/human-resource/pass-probation', Record<never, never>, Record<never, never>>,
     'MyDocumentBorrow': RouteRecordInfo<'MyDocumentBorrow', '/human-resource/recruitment-intention', Record<never, never>, Record<never, never>>,
     'RecruitmentIntentionDetail': RouteRecordInfo<'RecruitmentIntentionDetail', '/human-resource/recruitment-intention/detail', Record<never, never>, Record<never, never>>,
     'KeepAlive': RouteRecordInfo<'KeepAlive', '/keepalive', Record<never, never>, Record<never, never>>,
@@ -184,6 +185,10 @@ declare module 'vue-router/auto-routes' {
     }
     'src/pages/human-resource/job-entry/detail.vue': {
       routes: 'PassedCandidateDetail'
+      views: never
+    }
+    'src/pages/human-resource/pass-probation/index.vue': {
+      routes: 'PassedCandidatePassProbation'
       views: never
     }
     'src/pages/human-resource/recruitment-intention/index.vue': {
