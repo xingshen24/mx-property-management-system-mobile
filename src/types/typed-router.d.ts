@@ -20,9 +20,11 @@ declare module 'vue-router/auto-routes' {
   export interface RouteNamedMap {
     '/': RouteRecordInfo<'/', '/', Record<never, never>, Record<never, never>>,
     '404': RouteRecordInfo<'404', '/:all(.*)', { all: ParamValue<true> }, { all: ParamValue<false> }>,
+    'MyDepartmentAddressBook': RouteRecordInfo<'MyDepartmentAddressBook', '/basic/address-book', Record<never, never>, Record<never, never>>,
     'MyApproval': RouteRecordInfo<'MyApproval', '/basic/approval', Record<never, never>, Record<never, never>>,
     'MyBudgetReport': RouteRecordInfo<'MyBudgetReport', '/basic/budget-report', Record<never, never>, Record<never, never>>,
     'BudgetReportDetail': RouteRecordInfo<'BudgetReportDetail', '/basic/budget-report/detail', Record<never, never>, Record<never, never>>,
+    'MyDepartmentColleague': RouteRecordInfo<'MyDepartmentColleague', '/basic/department-colleague', Record<never, never>, Record<never, never>>,
     'MyDocumentBorrow': RouteRecordInfo<'MyDocumentBorrow', '/basic/document-borrow', Record<never, never>, Record<never, never>>,
     'MyDocumentBorrowDetail': RouteRecordInfo<'MyDocumentBorrowDetail', '/basic/document-borrow/detail', Record<never, never>, Record<never, never>>,
     'MyDocumentBorrowForm': RouteRecordInfo<'MyDocumentBorrowForm', '/basic/document-borrow/form', Record<never, never>, Record<never, never>>,
@@ -36,6 +38,8 @@ declare module 'vue-router/auto-routes' {
     'Charts': RouteRecordInfo<'Charts', '/charts', Record<never, never>, Record<never, never>>,
     'Counter': RouteRecordInfo<'Counter', '/counter', Record<never, never>, Record<never, never>>,
     'Home': RouteRecordInfo<'Home', '/home', Record<never, never>, Record<never, never>>,
+    'AddressBookDetail': RouteRecordInfo<'AddressBookDetail', '/human-resource/address-book/detail', Record<never, never>, Record<never, never>>,
+    '/human-resource/address-book/form': RouteRecordInfo<'/human-resource/address-book/form', '/human-resource/address-book/form', Record<never, never>, Record<never, never>>,
     'KeepAlive': RouteRecordInfo<'KeepAlive', '/keepalive', Record<never, never>, Record<never, never>>,
     'Login': RouteRecordInfo<'Login', '/login', Record<never, never>, Record<never, never>>,
     'Mock': RouteRecordInfo<'Mock', '/mock', Record<never, never>, Record<never, never>>,
@@ -65,6 +69,10 @@ declare module 'vue-router/auto-routes' {
       routes: '404'
       views: never
     }
+    'src/pages/basic/address-book/index.vue': {
+      routes: 'MyDepartmentAddressBook'
+      views: never
+    }
     'src/pages/basic/approval/index.vue': {
       routes: 'MyApproval'
       views: never
@@ -75,6 +83,10 @@ declare module 'vue-router/auto-routes' {
     }
     'src/pages/basic/budget-report/detail.vue': {
       routes: 'BudgetReportDetail'
+      views: never
+    }
+    'src/pages/basic/department-colleague/index.vue': {
+      routes: 'MyDepartmentColleague'
       views: never
     }
     'src/pages/basic/document-borrow/index.vue': {
@@ -127,6 +139,14 @@ declare module 'vue-router/auto-routes' {
     }
     'src/pages/home/index.vue': {
       routes: 'Home'
+      views: never
+    }
+    'src/pages/human-resource/address-book/detail.vue': {
+      routes: 'AddressBookDetail'
+      views: never
+    }
+    'src/pages/human-resource/address-book/form.vue': {
+      routes: '/human-resource/address-book/form'
       views: never
     }
     'src/pages/keepalive/index.vue': {

@@ -6,3 +6,8 @@ export function coverReactive(form: any, data: any) {
     form[key] = value
   }
 }
+
+
+export const callPhone = (phone: string) => {
+  window.location.href = `tel:${phone}`
+}

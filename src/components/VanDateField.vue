@@ -1,9 +1,10 @@
 <template>
   <div>
-    <van-field v-model="fieldValue" is-link readonly :label="label" :placeholder="placeholder" @click="openSelector" />
+    <van-field v-model="fieldValue" is-link readonly :label="label" :placeholder="placeholderText"
+      @click="openSelector" />
     <van-popup v-model:show="show" round position="bottom">
-      <van-date-picker v-model="currentDate" :title="title" :min-date="minDate" :max-date="maxDate" @confirm="onConfirm"
-        @cancel="onCancel" @change="onChange" />
+      <van-date-picker v-model="currentDate" :title="titleText" :min-date="minDate" :max-date="maxDate"
+        @confirm="onConfirm" @cancel="onCancel" @change="onChange" />
     </van-popup>
   </div>
 </template>
@@ -24,7 +25,7 @@ const props = defineProps({
   },
   title: {
     type: String,
-    default: '标题'
+    default: ''
   },
   placeholder: {
     type: String,
@@ -34,6 +35,20 @@ const props = defineProps({
     type: String,
     default: '',
   }
+})
+
+const placeholderText = computed(() => {
+  if (props.placeholder != null && props.placeholder != '') {
+    return props.placeholder;
+  }
+  return `请选择${props.label}`
+})
+
+const titleText = computed(() => {
+  if (props.title != null && props.title != '') {
+    return props.title;
+  }
+  return `请选择${props.label}`
 })
 
 const show = ref(false);

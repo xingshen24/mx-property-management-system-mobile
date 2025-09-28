@@ -21,7 +21,7 @@ import 'vant/es/toast/style'
 import 'vant/es/dialog/style'
 import 'vant/es/notify/style'
 import 'vant/es/image-preview/style'
-import { CellGroup, Col, Field, FloatingBubble, Form, Icon, List, Row, Swipe, SwipeItem, Tab, Tabs, Dialog, DatePicker, Picker } from 'vant'
+import { CellGroup, Col, Field, FloatingBubble, Form, Icon, List, Row, Swipe, SwipeItem, Tab, Tabs, Dialog, DatePicker, Picker, Highlight } from 'vant'
 
 const app = createApp(App)
 const head = createHead()
@@ -45,5 +45,6 @@ app.use(FloatingBubble)
 app.use(Dialog)
 app.use(DatePicker)
 app.use(Picker)
+app.use(Highlight)
 
 app.mount('#app')

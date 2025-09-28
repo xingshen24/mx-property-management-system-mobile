@@ -27,7 +27,6 @@ import { Api } from '@/utils/request';
 import { GetBorrowDocumentTypeName, GetBorrowTypeName, GetLendStateName } from './borrow';
 import { GetGeneralProcessStateName } from '@/pages/approval/approval';
 
-
 const route = useRoute();
 const id = route.query.id;
 

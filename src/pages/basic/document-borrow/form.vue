@@ -2,8 +2,7 @@
   <div class="page-wrapper">
     <van-form @submit="onSubmit" :model="form">
       <van-cell-group inset>
-        <van-date-field v-model="form.borrowDate" name="borrowDate" label="借阅日期" placeholder="请选择借阅日期" title="请选择借阅日期"
-          :rules="[{ required: true, message: '请选择借阅日期' }]" />
+        <van-date-field v-model="form.borrowDate" name="borrowDate" label="借阅日期" :rules="[needChoose('借阅日期')]" />
         <van-selector v-model="form.documentType" label="借阅类型" title="请选择借阅类型" :state-object="BorrowDocumentType"
           placeholder="请选择借阅类型" />
         <van-field v-model="form.documentName" name="documentName" label="档案名称" placeholder="请输入档案名称"
@@ -33,6 +32,7 @@ import { uploadFile } from '@/utils/uploader'
 import { showDialog } from 'vant'
 import { BorrowDocumentType } from './borrow'
 import { stdFormatToDay } from '@/utils/formatTime'
+import { needChoose } from '@/utils/rules'
 
 
 const fileList = ref([])

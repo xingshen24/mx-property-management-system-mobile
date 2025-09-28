@@ -53,9 +53,7 @@ loadDeptTree((deptTree) => {
   console.log(options)
 })
 
-const onChange = ({ }) => {
-
-};
+const onChange = () => { };
 
 const onFinish = ({ selectedOptions }) => {
   show.value = false;
