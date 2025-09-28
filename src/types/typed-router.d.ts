@@ -45,6 +45,8 @@ declare module 'vue-router/auto-routes' {
     'EmployeeDetail': RouteRecordInfo<'EmployeeDetail', '/human-resource/employee/detail', Record<never, never>, Record<never, never>>,
     'EmployeeContract': RouteRecordInfo<'EmployeeContract', '/human-resource/employee-contract', Record<never, never>, Record<never, never>>,
     'EmployeeContractDetail': RouteRecordInfo<'EmployeeContractDetail', '/human-resource/employee-contract/detail', Record<never, never>, Record<never, never>>,
+    'MyDocumentBorrow': RouteRecordInfo<'MyDocumentBorrow', '/human-resource/recruitment-intention', Record<never, never>, Record<never, never>>,
+    'RecruitmentIntentionDetail': RouteRecordInfo<'RecruitmentIntentionDetail', '/human-resource/recruitment-intention/detail', Record<never, never>, Record<never, never>>,
     'KeepAlive': RouteRecordInfo<'KeepAlive', '/keepalive', Record<never, never>, Record<never, never>>,
     'Login': RouteRecordInfo<'Login', '/login', Record<never, never>, Record<never, never>>,
     'Mock': RouteRecordInfo<'Mock', '/mock', Record<never, never>, Record<never, never>>,
@@ -172,6 +174,14 @@ declare module 'vue-router/auto-routes' {
     }
     'src/pages/human-resource/employee-contract/detail.vue': {
       routes: 'EmployeeContractDetail'
+      views: never
+    }
+    'src/pages/human-resource/recruitment-intention/index.vue': {
+      routes: 'MyDocumentBorrow'
+      views: never
+    }
+    'src/pages/human-resource/recruitment-intention/detail.vue': {
+      routes: 'RecruitmentIntentionDetail'
       views: never
     }
     'src/pages/keepalive/index.vue': {
