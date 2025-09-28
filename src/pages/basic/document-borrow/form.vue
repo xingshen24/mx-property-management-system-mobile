@@ -10,11 +10,13 @@
           :rules="[{ required: true, message: '请填写档案名称' }]" />
         <van-field v-model="form.purpose" type="textarea" name="purpose" label="借阅目的" placeholder="请输入借阅目的"
           :rules="[{ required: true, message: '请填写借阅目的' }]" />
+        <van-department v-model="form.lenderDeptId" label="出借部门" placeholder="请选择出借部门" title="请选择出借部门" />
         <van-employee v-model="form.lenderEmpId" label="出借人" placeholder="请选择出借人" title="请选择出借人" />
         <van-selector v-model="form.borrowType" label="借阅方式" title="请选择借阅方式" :state-object="BorrowDocumentType"
           placeholder="请选择借阅方式" />
         <van-date-field v-model="form.expectReturnDate" name="expectReturnDate" label="归还日期" placeholder="请选择预期归还日期"
           title="请选择预期归还日期" />
+        <van-field v-model="form.remark" type="textarea" label="备注" placeholder="请输入备注" />
         <van-field name="uploader" label="文件上传">
           <template #input>
             <van-uploader v-model="fileList" :after-read="afterRead" />
@@ -62,7 +64,7 @@ const onSubmit = () => {
     ...form,
     attachmentIds: fileList.value.map(t => t.id)
   }
-  Api.req('/request-for-instruction/add-and-submit').json(param).success(() => {
+  Api.req('/document-borrow/add-and-submit').json(param).success(() => {
     showDialog({
       message: '您已成功提交请求！',
       theme: 'round-button',

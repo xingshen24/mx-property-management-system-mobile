@@ -24,6 +24,7 @@ declare module 'vue' {
     VanDate: typeof import('./../components/VanDate.vue')['default']
     VanDateField: typeof import('./../components/VanDateField.vue')['default']
     VanDatePicker: typeof import('vant/es')['DatePicker']
+    VanDepartment: typeof import('./../components/VanDepartment.vue')['default']
     VanEmp: typeof import('vant/es')['Emp']
     VanEmployee: typeof import('./../components/VanEmployee.vue')['default']
     VanEmpty: typeof import('vant/es')['Empty']
