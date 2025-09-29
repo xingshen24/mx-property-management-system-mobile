@@ -13,7 +13,7 @@
       <van-cell title="员工性别" :value="GetGenderNameByCode(detail.gender)" />
       <van-cell title="身份证" :value="detail.idCard" />
       <van-cell title="出生日期" :value="detail.birthday" />
-      <van-cell title="年龄" :value="detail.age" />
+      <van-cell title="年龄" :value="detail.age != null ? `${detail.age}岁` : ''" />
       <van-cell title="现居地址" :value="detail.address" />
       <van-cell title="退休时间" :value="detail.retirementTime" />
       <van-cell title="合同类别" :value="GetEmployeeContractTypeName(detail.contractType)" />
