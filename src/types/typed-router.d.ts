@@ -45,6 +45,8 @@ declare module 'vue-router/auto-routes' {
     'EmployeeDetail': RouteRecordInfo<'EmployeeDetail', '/human-resource/employee/detail', Record<never, never>, Record<never, never>>,
     'EmployeeContract': RouteRecordInfo<'EmployeeContract', '/human-resource/employee-contract', Record<never, never>, Record<never, never>>,
     'EmployeeContractDetail': RouteRecordInfo<'EmployeeContractDetail', '/human-resource/employee-contract/detail', Record<never, never>, Record<never, never>>,
+    'Insurance': RouteRecordInfo<'Insurance', '/human-resource/insurance', Record<never, never>, Record<never, never>>,
+    'EmployeeInsuranceDetail': RouteRecordInfo<'EmployeeInsuranceDetail', '/human-resource/insurance/detail', Record<never, never>, Record<never, never>>,
     'PassedCandidateJobEntry': RouteRecordInfo<'PassedCandidateJobEntry', '/human-resource/job-entry', Record<never, never>, Record<never, never>>,
     'PassedCandidateDetail': RouteRecordInfo<'PassedCandidateDetail', '/human-resource/job-entry/detail', Record<never, never>, Record<never, never>>,
     'PassedCandidatePassProbation': RouteRecordInfo<'PassedCandidatePassProbation', '/human-resource/pass-probation', Record<never, never>, Record<never, never>>,
@@ -179,6 +181,14 @@ declare module 'vue-router/auto-routes' {
     }
     'src/pages/human-resource/employee-contract/detail.vue': {
       routes: 'EmployeeContractDetail'
+      views: never
+    }
+    'src/pages/human-resource/insurance/index.vue': {
+      routes: 'Insurance'
+      views: never
+    }
+    'src/pages/human-resource/insurance/detail.vue': {
+      routes: 'EmployeeInsuranceDetail'
       views: never
     }
     'src/pages/human-resource/job-entry/index.vue': {
