@@ -128,6 +128,6 @@ function loadInsured() {
 
 <route lang="json5">
 {
-  name: 'Insurance'
+  name: 'EmployeeInsurance'
 }
 </route>
