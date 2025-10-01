@@ -52,6 +52,9 @@ declare module 'vue-router/auto-routes' {
     'LeaveOrder': RouteRecordInfo<'LeaveOrder', '/human-resource/leave-order', Record<never, never>, Record<never, never>>,
     'LeaveOrderDetail': RouteRecordInfo<'LeaveOrderDetail', '/human-resource/leave-order/detail', Record<never, never>, Record<never, never>>,
     'LeaveOrderForm': RouteRecordInfo<'LeaveOrderForm', '/human-resource/leave-order/form', Record<never, never>, Record<never, never>>,
+    'OvertimeTicket': RouteRecordInfo<'OvertimeTicket', '/human-resource/overtime-ticket', Record<never, never>, Record<never, never>>,
+    'OvertimeTicketDetail': RouteRecordInfo<'OvertimeTicketDetail', '/human-resource/overtime-ticket/detail', Record<never, never>, Record<never, never>>,
+    'OvertimeTicketForm': RouteRecordInfo<'OvertimeTicketForm', '/human-resource/overtime-ticket/form', Record<never, never>, Record<never, never>>,
     'PassedCandidatePassProbation': RouteRecordInfo<'PassedCandidatePassProbation', '/human-resource/pass-probation', Record<never, never>, Record<never, never>>,
     'MyDocumentBorrow': RouteRecordInfo<'MyDocumentBorrow', '/human-resource/recruitment-intention', Record<never, never>, Record<never, never>>,
     'RecruitmentIntentionDetail': RouteRecordInfo<'RecruitmentIntentionDetail', '/human-resource/recruitment-intention/detail', Record<never, never>, Record<never, never>>,
@@ -212,6 +215,18 @@ declare module 'vue-router/auto-routes' {
     }
     'src/pages/human-resource/leave-order/form.vue': {
       routes: 'LeaveOrderForm'
+      views: never
+    }
+    'src/pages/human-resource/overtime-ticket/index.vue': {
+      routes: 'OvertimeTicket'
+      views: never
+    }
+    'src/pages/human-resource/overtime-ticket/detail.vue': {
+      routes: 'OvertimeTicketDetail'
+      views: never
+    }
+    'src/pages/human-resource/overtime-ticket/form.vue': {
+      routes: 'OvertimeTicketForm'
       views: never
     }
     'src/pages/human-resource/pass-probation/index.vue': {
