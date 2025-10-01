@@ -18,12 +18,12 @@
           :url="`leave-order/detail?id=${item.id}`" />
       </van-list>
     </van-tab>
+    <van-floating-bubble axis="lock" icon="plus" @click="addNewLeaveOrder" />
   </van-tabs>
 </template>
 
 <script lang="ts" setup>
 import { Api } from '@/utils/request'
-import { GetInsuranceTypeName, InsuranceState } from '../employee/employee';
 import { DualTrackProcessState } from '@/pages/approval/approval';
 
 interface SearchForm {
@@ -129,6 +129,13 @@ function loadHandling() {
 function loadApproved() {
   searchApproved(false)
 }
+
+const router = useRouter();
+const addNewLeaveOrder = () => {
+  router.push('/human-resource/leave-order/form');
+}
+
+
 </script>
 
 <route lang="json5">

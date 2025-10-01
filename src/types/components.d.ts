@@ -9,6 +9,7 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     Chart: typeof import('./../components/Chart/index.vue')['default']
+    copy: typeof import('./../components/VanDateField copy.vue')['default']
     FileAttachments: typeof import('./../components/FileAttachments.vue')['default']
     GhostButton: typeof import('./../components/GhostButton.vue')['default']
     NavBar: typeof import('./../components/NavBar.vue')['default']
@@ -24,6 +25,7 @@ declare module 'vue' {
     VanDate: typeof import('./../components/VanDate.vue')['default']
     VanDateField: typeof import('./../components/VanDateField.vue')['default']
     VanDatePicker: typeof import('vant/es')['DatePicker']
+    VanDateTimeField: typeof import('./../components/VanDateTimeField.vue')['default']
     VanDepartment: typeof import('./../components/VanDepartment.vue')['default']
     VanEmp: typeof import('vant/es')['Emp']
     VanEmployee: typeof import('./../components/VanEmployee.vue')['default']
@@ -51,6 +53,7 @@ declare module 'vue' {
     VanTabbarItem: typeof import('vant/es')['TabbarItem']
     VanTabs: typeof import('vant/es')['Tabs']
     VanTextEllipsis: typeof import('vant/es')['TextEllipsis']
+    VanTimePicker: typeof import('vant/es')['TimePicker']
     VanUploader: typeof import('vant/es')['Uploader']
   }
 }

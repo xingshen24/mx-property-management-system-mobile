@@ -17,8 +17,7 @@
     "lint:fix": "eslint . --fix",
     "release": "bumpp --commit --push --tag",
     "typecheck": "vue-tsc --noEmit",
-    "commitlint": "commitlint --edit",
-    "prepare": "simple-git-hooks"
+    "commitlint": "commitlint --edit"
   },
   "dependencies": {
     "@unhead/vue": "2.0.14",

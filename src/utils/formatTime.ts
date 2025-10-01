@@ -174,3 +174,11 @@ export const timeToDate = (time: string) => {
 	}
 	return new Date(time)
 }
+
+const TIME_STR_LENGTH = "YYYY-mm-dd HH:MM".length;
+export const extendSeconds = (time: string) => {
+	if (time == null || time.length != TIME_STR_LENGTH) {
+		return time;
+	}
+	return `${time}:00`
+}

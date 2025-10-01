@@ -50,6 +50,8 @@ declare module 'vue-router/auto-routes' {
     'PassedCandidateJobEntry': RouteRecordInfo<'PassedCandidateJobEntry', '/human-resource/job-entry', Record<never, never>, Record<never, never>>,
     'PassedCandidateDetail': RouteRecordInfo<'PassedCandidateDetail', '/human-resource/job-entry/detail', Record<never, never>, Record<never, never>>,
     'LeaveOrder': RouteRecordInfo<'LeaveOrder', '/human-resource/leave-order', Record<never, never>, Record<never, never>>,
+    'LeaveOrderDetail': RouteRecordInfo<'LeaveOrderDetail', '/human-resource/leave-order/detail', Record<never, never>, Record<never, never>>,
+    'LeaveOrderForm': RouteRecordInfo<'LeaveOrderForm', '/human-resource/leave-order/form', Record<never, never>, Record<never, never>>,
     'PassedCandidatePassProbation': RouteRecordInfo<'PassedCandidatePassProbation', '/human-resource/pass-probation', Record<never, never>, Record<never, never>>,
     'MyDocumentBorrow': RouteRecordInfo<'MyDocumentBorrow', '/human-resource/recruitment-intention', Record<never, never>, Record<never, never>>,
     'RecruitmentIntentionDetail': RouteRecordInfo<'RecruitmentIntentionDetail', '/human-resource/recruitment-intention/detail', Record<never, never>, Record<never, never>>,
@@ -202,6 +204,14 @@ declare module 'vue-router/auto-routes' {
     }
     'src/pages/human-resource/leave-order/index.vue': {
       routes: 'LeaveOrder'
+      views: never
+    }
+    'src/pages/human-resource/leave-order/detail.vue': {
+      routes: 'LeaveOrderDetail'
+      views: never
+    }
+    'src/pages/human-resource/leave-order/form.vue': {
+      routes: 'LeaveOrderForm'
       views: never
     }
     'src/pages/human-resource/pass-probation/index.vue': {
