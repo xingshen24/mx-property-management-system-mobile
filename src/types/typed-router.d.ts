@@ -39,6 +39,8 @@ declare module 'vue-router/auto-routes' {
     'Counter': RouteRecordInfo<'Counter', '/counter', Record<never, never>, Record<never, never>>,
     'InvoiceManagement': RouteRecordInfo<'InvoiceManagement', '/finance/invoice', Record<never, never>, Record<never, never>>,
     'InvoiceDetail': RouteRecordInfo<'InvoiceDetail', '/finance/invoice/detail', Record<never, never>, Record<never, never>>,
+    'InvoiceReceiveItem': RouteRecordInfo<'InvoiceReceiveItem', '/finance/invoice-receive-item', Record<never, never>, Record<never, never>>,
+    'InvoiceReceiveItemDetail': RouteRecordInfo<'InvoiceReceiveItemDetail', '/finance/invoice-receive-item/detail', Record<never, never>, Record<never, never>>,
     'ReceivePayment': RouteRecordInfo<'ReceivePayment', '/finance/receive-payment', Record<never, never>, Record<never, never>>,
     'ReceivePaymentDetail': RouteRecordInfo<'ReceivePaymentDetail', '/finance/receive-payment/detail', Record<never, never>, Record<never, never>>,
     'ReimburseManagement': RouteRecordInfo<'ReimburseManagement', '/finance/reimburse', Record<never, never>, Record<never, never>>,
@@ -169,6 +171,14 @@ declare module 'vue-router/auto-routes' {
     }
     'src/pages/finance/invoice/detail.vue': {
       routes: 'InvoiceDetail'
+      views: never
+    }
+    'src/pages/finance/invoice-receive-item/index.vue': {
+      routes: 'InvoiceReceiveItem'
+      views: never
+    }
+    'src/pages/finance/invoice-receive-item/detail.vue': {
+      routes: 'InvoiceReceiveItemDetail'
       views: never
     }
     'src/pages/finance/receive-payment/index.vue': {

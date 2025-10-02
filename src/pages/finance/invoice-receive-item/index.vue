@@ -1,0 +1,61 @@
+<template>
+  <van-search v-model="keywords" placeholder="请输入部门/购买方" input-align="center" @search="setKeywordsAndSearch" />
+  <van-list v-model:loading="loading" :finished="finished" finished-text="没有更多了" @load="onLoad">
+    <van-cell v-for="item in list" :key="item.id" :title="receiveItemTitle(item)" is-link
+      :url="`invoice-receive-item/detail?id=${item.id}`" />
+  </van-list>
+</template>
+
+<script lang="ts" setup>
+import { Api } from '@/utils/request'
+import { GetFeeTypeName } from '../invoice/invoice'
+
+const list = ref([])
+const finished = ref(false)
+const loading = ref(false)
+const keywords = ref('')
+const form = reactive({
+  keywords: '',
+  page: 1,
+  size: 25,
+})
+
+const receiveItemTitle = (item: any) => {
+  return `【${item.deptName}】${item.buyerName}于${item.payTime?.substring(0, 10)}支付${item.amount}元${GetFeeTypeName(item.feeType)}`;
+}
+
+function setKeywordsAndSearch() {
+  form.page = 1
+  form.size = 25
+  form.keywords = keywords.value
+  search(true)
+}
+
+function search(reset: boolean) {
+  loading.value = true
+  const param = { ...form }
+  Api.req('/invoice-receive-item/query').query(param).success((data: any[]) => {
+    data = data ?? []
+    if (data.length < param.size) {
+      finished.value = true
+    }
+    form.page = form.page + 1
+    if (!reset) {
+      data.forEach(e => list.value.push(e))
+    }
+    else {
+      list.value = data
+    }
+  }).finally(() => loading.value = false).get()
+}
+
+function onLoad() {
+  search(false)
+}
+</script>
+
+<route lang="json5">
+{
+  name: 'InvoiceReceiveItem'
+}
+</route>
