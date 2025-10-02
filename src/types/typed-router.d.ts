@@ -37,6 +37,8 @@ declare module 'vue-router/auto-routes' {
     'MyTargetResponsibilityLetterDetail': RouteRecordInfo<'MyTargetResponsibilityLetterDetail', '/basic/target-responsibility-letter/detail', Record<never, never>, Record<never, never>>,
     'Charts': RouteRecordInfo<'Charts', '/charts', Record<never, never>, Record<never, never>>,
     'Counter': RouteRecordInfo<'Counter', '/counter', Record<never, never>, Record<never, never>>,
+    'ReimburseManagement': RouteRecordInfo<'ReimburseManagement', '/finance/reimburse', Record<never, never>, Record<never, never>>,
+    'ReimburseDetail': RouteRecordInfo<'ReimburseDetail', '/finance/reimburse/detail', Record<never, never>, Record<never, never>>,
     'Home': RouteRecordInfo<'Home', '/home', Record<never, never>, Record<never, never>>,
     'AddressBook': RouteRecordInfo<'AddressBook', '/human-resource/address-book', Record<never, never>, Record<never, never>>,
     'AddressBookDetail': RouteRecordInfo<'AddressBookDetail', '/human-resource/address-book/detail', Record<never, never>, Record<never, never>>,
@@ -155,6 +157,14 @@ declare module 'vue-router/auto-routes' {
     }
     'src/pages/counter/index.vue': {
       routes: 'Counter'
+      views: never
+    }
+    'src/pages/finance/reimburse/index.vue': {
+      routes: 'ReimburseManagement'
+      views: never
+    }
+    'src/pages/finance/reimburse/detail.vue': {
+      routes: 'ReimburseDetail'
       views: never
     }
     'src/pages/home/index.vue': {
