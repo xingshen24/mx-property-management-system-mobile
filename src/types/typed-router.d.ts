@@ -37,6 +37,10 @@ declare module 'vue-router/auto-routes' {
     'MyTargetResponsibilityLetterDetail': RouteRecordInfo<'MyTargetResponsibilityLetterDetail', '/basic/target-responsibility-letter/detail', Record<never, never>, Record<never, never>>,
     'Charts': RouteRecordInfo<'Charts', '/charts', Record<never, never>, Record<never, never>>,
     'Counter': RouteRecordInfo<'Counter', '/counter', Record<never, never>, Record<never, never>>,
+    'InvoiceManagement': RouteRecordInfo<'InvoiceManagement', '/finance/invoice', Record<never, never>, Record<never, never>>,
+    'InvoiceDetail': RouteRecordInfo<'InvoiceDetail', '/finance/invoice/detail', Record<never, never>, Record<never, never>>,
+    'ReceivePayment': RouteRecordInfo<'ReceivePayment', '/finance/receive-payment', Record<never, never>, Record<never, never>>,
+    'ReceivePaymentDetail': RouteRecordInfo<'ReceivePaymentDetail', '/finance/receive-payment/detail', Record<never, never>, Record<never, never>>,
     'ReimburseManagement': RouteRecordInfo<'ReimburseManagement', '/finance/reimburse', Record<never, never>, Record<never, never>>,
     'ReimburseDetail': RouteRecordInfo<'ReimburseDetail', '/finance/reimburse/detail', Record<never, never>, Record<never, never>>,
     'Home': RouteRecordInfo<'Home', '/home', Record<never, never>, Record<never, never>>,
@@ -157,6 +161,22 @@ declare module 'vue-router/auto-routes' {
     }
     'src/pages/counter/index.vue': {
       routes: 'Counter'
+      views: never
+    }
+    'src/pages/finance/invoice/index.vue': {
+      routes: 'InvoiceManagement'
+      views: never
+    }
+    'src/pages/finance/invoice/detail.vue': {
+      routes: 'InvoiceDetail'
+      views: never
+    }
+    'src/pages/finance/receive-payment/index.vue': {
+      routes: 'ReceivePayment'
+      views: never
+    }
+    'src/pages/finance/receive-payment/detail.vue': {
+      routes: 'ReceivePaymentDetail'
       views: never
     }
     'src/pages/finance/reimburse/index.vue': {
