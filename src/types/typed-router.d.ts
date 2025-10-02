@@ -45,6 +45,8 @@ declare module 'vue-router/auto-routes' {
     'ReceivePaymentDetail': RouteRecordInfo<'ReceivePaymentDetail', '/finance/receive-payment/detail', Record<never, never>, Record<never, never>>,
     'ReimburseManagement': RouteRecordInfo<'ReimburseManagement', '/finance/reimburse', Record<never, never>, Record<never, never>>,
     'ReimburseDetail': RouteRecordInfo<'ReimburseDetail', '/finance/reimburse/detail', Record<never, never>, Record<never, never>>,
+    'PublishArticle': RouteRecordInfo<'PublishArticle', '/general-affair/publish-article', Record<never, never>, Record<never, never>>,
+    'PublishArticleDetail': RouteRecordInfo<'PublishArticleDetail', '/general-affair/publish-article/detail', Record<never, never>, Record<never, never>>,
     'ReceiveArticle': RouteRecordInfo<'ReceiveArticle', '/general-affair/receive-article', Record<never, never>, Record<never, never>>,
     'ReceiveArticleDetail': RouteRecordInfo<'ReceiveArticleDetail', '/general-affair/receive-article/detail', Record<never, never>, Record<never, never>>,
     'Home': RouteRecordInfo<'Home', '/home', Record<never, never>, Record<never, never>>,
@@ -197,6 +199,14 @@ declare module 'vue-router/auto-routes' {
     }
     'src/pages/finance/reimburse/detail.vue': {
       routes: 'ReimburseDetail'
+      views: never
+    }
+    'src/pages/general-affair/publish-article/index.vue': {
+      routes: 'PublishArticle'
+      views: never
+    }
+    'src/pages/general-affair/publish-article/detail.vue': {
+      routes: 'PublishArticleDetail'
       views: never
     }
     'src/pages/general-affair/receive-article/index.vue': {
