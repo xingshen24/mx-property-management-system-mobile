@@ -45,6 +45,8 @@ declare module 'vue-router/auto-routes' {
     'ReceivePaymentDetail': RouteRecordInfo<'ReceivePaymentDetail', '/finance/receive-payment/detail', Record<never, never>, Record<never, never>>,
     'ReimburseManagement': RouteRecordInfo<'ReimburseManagement', '/finance/reimburse', Record<never, never>, Record<never, never>>,
     'ReimburseDetail': RouteRecordInfo<'ReimburseDetail', '/finance/reimburse/detail', Record<never, never>, Record<never, never>>,
+    'OfficeMeetingResolution': RouteRecordInfo<'OfficeMeetingResolution', '/general-affair/office-meeting-resolution', Record<never, never>, Record<never, never>>,
+    'OfficeMeetingResolutionDetail': RouteRecordInfo<'OfficeMeetingResolutionDetail', '/general-affair/office-meeting-resolution/detail', Record<never, never>, Record<never, never>>,
     'ProposalManagement': RouteRecordInfo<'ProposalManagement', '/general-affair/proposal', Record<never, never>, Record<never, never>>,
     'ProposalDetail': RouteRecordInfo<'ProposalDetail', '/general-affair/proposal/detail', Record<never, never>, Record<never, never>>,
     'PublishArticle': RouteRecordInfo<'PublishArticle', '/general-affair/publish-article', Record<never, never>, Record<never, never>>,
@@ -201,6 +203,14 @@ declare module 'vue-router/auto-routes' {
     }
     'src/pages/finance/reimburse/detail.vue': {
       routes: 'ReimburseDetail'
+      views: never
+    }
+    'src/pages/general-affair/office-meeting-resolution/index.vue': {
+      routes: 'OfficeMeetingResolution'
+      views: never
+    }
+    'src/pages/general-affair/office-meeting-resolution/detail.vue': {
+      routes: 'OfficeMeetingResolutionDetail'
       views: never
     }
     'src/pages/general-affair/proposal/index.vue': {
