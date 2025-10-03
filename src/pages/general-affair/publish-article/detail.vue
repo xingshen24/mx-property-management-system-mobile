@@ -27,25 +27,10 @@ import { coverReactive } from '@/utils/common';
 import { Api } from '@/utils/request';
 import { GetClassificationName, GetUrgencyName } from '../common/common';
 import { GetTieredApprovalStateName } from '@/pages/approval/approval';
+import { collectName } from '@/pages/common/common';
 
 const route = useRoute();
 const id = route.query.id;
-
-interface IdName {
-  id: number;
-  name: string;
-}
-
-const collectName = (idNames: IdName[]) => {
-  if (idNames == null) {
-    return ''
-  }
-  const nameArr = <String[]>[];
-  for (const idName of idNames) {
-    nameArr.push(idName.name ?? '');
-  }
-  return nameArr.join('，')
-}
 
 const detail = reactive({
   id: <number | null>null,
