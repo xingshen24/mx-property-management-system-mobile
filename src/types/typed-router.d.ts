@@ -34,7 +34,6 @@ declare module 'vue-router/auto-routes' {
     'MyRequestForInstructionDetail': RouteRecordInfo<'MyRequestForInstructionDetail', '/basic/request-for-instruction/detail', Record<never, never>, Record<never, never>>,
     'MyRequestForInstructionForm': RouteRecordInfo<'MyRequestForInstructionForm', '/basic/request-for-instruction/form', Record<never, never>, Record<never, never>>,
     'MyTargetResponsibilityLetter': RouteRecordInfo<'MyTargetResponsibilityLetter', '/basic/target-responsibility-letter', Record<never, never>, Record<never, never>>,
-    'MyTargetResponsibilityLetterDetail': RouteRecordInfo<'MyTargetResponsibilityLetterDetail', '/basic/target-responsibility-letter/detail', Record<never, never>, Record<never, never>>,
     'Charts': RouteRecordInfo<'Charts', '/charts', Record<never, never>, Record<never, never>>,
     'Counter': RouteRecordInfo<'Counter', '/counter', Record<never, never>, Record<never, never>>,
     'InvoiceManagement': RouteRecordInfo<'InvoiceManagement', '/finance/invoice', Record<never, never>, Record<never, never>>,
@@ -56,6 +55,8 @@ declare module 'vue-router/auto-routes' {
     'PublishArticleDetail': RouteRecordInfo<'PublishArticleDetail', '/general-affair/publish-article/detail', Record<never, never>, Record<never, never>>,
     'ReceiveArticle': RouteRecordInfo<'ReceiveArticle', '/general-affair/receive-article', Record<never, never>, Record<never, never>>,
     'ReceiveArticleDetail': RouteRecordInfo<'ReceiveArticleDetail', '/general-affair/receive-article/detail', Record<never, never>, Record<never, never>>,
+    'TargetResponsibilityLetter': RouteRecordInfo<'TargetResponsibilityLetter', '/general-affair/target-responsibility-letter', Record<never, never>, Record<never, never>>,
+    'MyTargetResponsibilityLetterDetail': RouteRecordInfo<'MyTargetResponsibilityLetterDetail', '/general-affair/target-responsibility-letter/detail', Record<never, never>, Record<never, never>>,
     'Home': RouteRecordInfo<'Home', '/home', Record<never, never>, Record<never, never>>,
     'AddressBook': RouteRecordInfo<'AddressBook', '/human-resource/address-book', Record<never, never>, Record<never, never>>,
     'AddressBookDetail': RouteRecordInfo<'AddressBookDetail', '/human-resource/address-book/detail', Record<never, never>, Record<never, never>>,
@@ -164,10 +165,6 @@ declare module 'vue-router/auto-routes' {
       routes: 'MyTargetResponsibilityLetter'
       views: never
     }
-    'src/pages/basic/target-responsibility-letter/detail.vue': {
-      routes: 'MyTargetResponsibilityLetterDetail'
-      views: never
-    }
     'src/pages/charts/index.vue': {
       routes: 'Charts'
       views: never
@@ -250,6 +247,14 @@ declare module 'vue-router/auto-routes' {
     }
     'src/pages/general-affair/receive-article/detail.vue': {
       routes: 'ReceiveArticleDetail'
+      views: never
+    }
+    'src/pages/general-affair/target-responsibility-letter/index.vue': {
+      routes: 'TargetResponsibilityLetter'
+      views: never
+    }
+    'src/pages/general-affair/target-responsibility-letter/detail.vue': {
+      routes: 'MyTargetResponsibilityLetterDetail'
       views: never
     }
     'src/pages/home/index.vue': {

@@ -1,8 +1,8 @@
 <template>
-  <van-search v-model="keywords" placeholder="请输入搜索关键词" input-align="center" @search="setKeywordsAndSearch" />
+  <van-search v-model="keywords" placeholder="请输入签订人/标题" input-align="center" @search="setKeywordsAndSearch" />
   <van-list v-model:loading="loading" :finished="finished" finished-text="没有更多了" @load="onLoad">
-    <van-cell v-for="item in list" :key="item.id" :title="item.title" is-link
-      :url="`/general-affair/target-responsibility-letter/detail?id=${item.id}`" />
+    <van-cell v-for="item in list" :key="item.id" :title="letterTitle(item)" is-link
+      :url="`target-responsibility-letter/detail?id=${item.id}`" />
   </van-list>
 </template>
 
@@ -19,6 +19,10 @@ const form = reactive({
   size: 25,
 })
 
+const letterTitle = (item: any) => {
+  return `【${item.signEmpName}】${item.title}`;
+}
+
 function setKeywordsAndSearch() {
   form.page = 1
   form.size = 25
@@ -29,7 +33,7 @@ function setKeywordsAndSearch() {
 function search(reset: boolean) {
   loading.value = true
   const param = { ...form }
-  Api.req('/target-responsibility-letter/query-mine').query(param).success((data: any[]) => {
+  Api.req('/target-responsibility-letter/query').query(param).success((data: any[]) => {
     data = data ?? []
     if (data.length < param.size) {
       finished.value = true
@@ -47,11 +51,10 @@ function search(reset: boolean) {
 function onLoad() {
   search(false)
 }
-
 </script>
 
 <route lang="json5">
 {
-  name: 'MyTargetResponsibilityLetter'
+  name: 'TargetResponsibilityLetter'
 }
 </route>
