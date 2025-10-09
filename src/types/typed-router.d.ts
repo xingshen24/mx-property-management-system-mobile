@@ -53,6 +53,8 @@ declare module 'vue-router/auto-routes' {
     'ProposalDetail': RouteRecordInfo<'ProposalDetail', '/general-affair/proposal/detail', Record<never, never>, Record<never, never>>,
     'PublishArticle': RouteRecordInfo<'PublishArticle', '/general-affair/publish-article', Record<never, never>, Record<never, never>>,
     'PublishArticleDetail': RouteRecordInfo<'PublishArticleDetail', '/general-affair/publish-article/detail', Record<never, never>, Record<never, never>>,
+    'PurchaseContractManagement': RouteRecordInfo<'PurchaseContractManagement', '/general-affair/purchase-contract', Record<never, never>, Record<never, never>>,
+    'ContractDetail': RouteRecordInfo<'ContractDetail', '/general-affair/purchase-contract/detail', Record<never, never>, Record<never, never>>,
     'ReceiveArticle': RouteRecordInfo<'ReceiveArticle', '/general-affair/receive-article', Record<never, never>, Record<never, never>>,
     'ReceiveArticleDetail': RouteRecordInfo<'ReceiveArticleDetail', '/general-affair/receive-article/detail', Record<never, never>, Record<never, never>>,
     'TargetResponsibilityLetter': RouteRecordInfo<'TargetResponsibilityLetter', '/general-affair/target-responsibility-letter', Record<never, never>, Record<never, never>>,
@@ -239,6 +241,14 @@ declare module 'vue-router/auto-routes' {
     }
     'src/pages/general-affair/publish-article/detail.vue': {
       routes: 'PublishArticleDetail'
+      views: never
+    }
+    'src/pages/general-affair/purchase-contract/index.vue': {
+      routes: 'PurchaseContractManagement'
+      views: never
+    }
+    'src/pages/general-affair/purchase-contract/detail.vue': {
+      routes: 'ContractDetail'
       views: never
     }
     'src/pages/general-affair/receive-article/index.vue': {
