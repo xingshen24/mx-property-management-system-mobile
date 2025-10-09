@@ -44,6 +44,9 @@ declare module 'vue-router/auto-routes' {
     'ReceivePaymentDetail': RouteRecordInfo<'ReceivePaymentDetail', '/finance/receive-payment/detail', Record<never, never>, Record<never, never>>,
     'ReimburseManagement': RouteRecordInfo<'ReimburseManagement', '/finance/reimburse', Record<never, never>, Record<never, never>>,
     'ReimburseDetail': RouteRecordInfo<'ReimburseDetail', '/finance/reimburse/detail', Record<never, never>, Record<never, never>>,
+    'EntertainManagement': RouteRecordInfo<'EntertainManagement', '/general-affair/entertain', Record<never, never>, Record<never, never>>,
+    'EntertainDetail': RouteRecordInfo<'EntertainDetail', '/general-affair/entertain/detail', Record<never, never>, Record<never, never>>,
+    'EntertainForm': RouteRecordInfo<'EntertainForm', '/general-affair/entertain/form', Record<never, never>, Record<never, never>>,
     'MeetingManagement': RouteRecordInfo<'MeetingManagement', '/general-affair/meeting', Record<never, never>, Record<never, never>>,
     'MeetingDetail': RouteRecordInfo<'MeetingDetail', '/general-affair/meeting/detail', Record<never, never>, Record<never, never>>,
     'MonthMeeting': RouteRecordInfo<'MonthMeeting', '/general-affair/month-meeting', Record<never, never>, Record<never, never>>,
@@ -210,6 +213,18 @@ declare module 'vue-router/auto-routes' {
     }
     'src/pages/finance/reimburse/detail.vue': {
       routes: 'ReimburseDetail'
+      views: never
+    }
+    'src/pages/general-affair/entertain/index.vue': {
+      routes: 'EntertainManagement'
+      views: never
+    }
+    'src/pages/general-affair/entertain/detail.vue': {
+      routes: 'EntertainDetail'
+      views: never
+    }
+    'src/pages/general-affair/entertain/form.vue': {
+      routes: 'EntertainForm'
       views: never
     }
     'src/pages/general-affair/meeting/index.vue': {

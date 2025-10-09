@@ -9,7 +9,7 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     Chart: typeof import('./../components/Chart/index.vue')['default']
-    copy: typeof import('./../components/VanSelector copy.vue')['default']
+    copy: typeof import('./../components/VanBizObjectSelector copy.vue')['default']
     FileAttachments: typeof import('./../components/FileAttachments.vue')['default']
     GhostButton: typeof import('./../components/GhostButton.vue')['default']
     NavBar: typeof import('./../components/NavBar.vue')['default']
@@ -28,6 +28,7 @@ declare module 'vue' {
     VanDatePicker: typeof import('vant/es')['DatePicker']
     VanDateTimeField: typeof import('./../components/VanDateTimeField.vue')['default']
     VanDepartment: typeof import('./../components/VanDepartment.vue')['default']
+    VanDict: typeof import('./../components/VanDict.vue')['default']
     VanEmp: typeof import('vant/es')['Emp']
     VanEmployee: typeof import('./../components/VanEmployee.vue')['default']
     VanEmpty: typeof import('vant/es')['Empty']
