@@ -49,12 +49,14 @@ declare module 'vue-router/auto-routes' {
     'MonthMeeting': RouteRecordInfo<'MonthMeeting', '/general-affair/month-meeting', Record<never, never>, Record<never, never>>,
     'OfficeMeetingResolution': RouteRecordInfo<'OfficeMeetingResolution', '/general-affair/office-meeting-resolution', Record<never, never>, Record<never, never>>,
     'OfficeMeetingResolutionDetail': RouteRecordInfo<'OfficeMeetingResolutionDetail', '/general-affair/office-meeting-resolution/detail', Record<never, never>, Record<never, never>>,
+    'PropertyContractManagement': RouteRecordInfo<'PropertyContractManagement', '/general-affair/property-contract', Record<never, never>, Record<never, never>>,
+    'PropertyContractDetail': RouteRecordInfo<'PropertyContractDetail', '/general-affair/property-contract/detail', Record<never, never>, Record<never, never>>,
     'ProposalManagement': RouteRecordInfo<'ProposalManagement', '/general-affair/proposal', Record<never, never>, Record<never, never>>,
     'ProposalDetail': RouteRecordInfo<'ProposalDetail', '/general-affair/proposal/detail', Record<never, never>, Record<never, never>>,
     'PublishArticle': RouteRecordInfo<'PublishArticle', '/general-affair/publish-article', Record<never, never>, Record<never, never>>,
     'PublishArticleDetail': RouteRecordInfo<'PublishArticleDetail', '/general-affair/publish-article/detail', Record<never, never>, Record<never, never>>,
     'PurchaseContractManagement': RouteRecordInfo<'PurchaseContractManagement', '/general-affair/purchase-contract', Record<never, never>, Record<never, never>>,
-    'ContractDetail': RouteRecordInfo<'ContractDetail', '/general-affair/purchase-contract/detail', Record<never, never>, Record<never, never>>,
+    'PurchaseContractDetail': RouteRecordInfo<'PurchaseContractDetail', '/general-affair/purchase-contract/detail', Record<never, never>, Record<never, never>>,
     'ReceiveArticle': RouteRecordInfo<'ReceiveArticle', '/general-affair/receive-article', Record<never, never>, Record<never, never>>,
     'ReceiveArticleDetail': RouteRecordInfo<'ReceiveArticleDetail', '/general-affair/receive-article/detail', Record<never, never>, Record<never, never>>,
     'TargetResponsibilityLetter': RouteRecordInfo<'TargetResponsibilityLetter', '/general-affair/target-responsibility-letter', Record<never, never>, Record<never, never>>,
@@ -227,6 +229,14 @@ declare module 'vue-router/auto-routes' {
       routes: 'OfficeMeetingResolutionDetail'
       views: never
     }
+    'src/pages/general-affair/property-contract/index.vue': {
+      routes: 'PropertyContractManagement'
+      views: never
+    }
+    'src/pages/general-affair/property-contract/detail.vue': {
+      routes: 'PropertyContractDetail'
+      views: never
+    }
     'src/pages/general-affair/proposal/index.vue': {
       routes: 'ProposalManagement'
       views: never
@@ -248,7 +258,7 @@ declare module 'vue-router/auto-routes' {
       views: never
     }
     'src/pages/general-affair/purchase-contract/detail.vue': {
-      routes: 'ContractDetail'
+      routes: 'PurchaseContractDetail'
       views: never
     }
     'src/pages/general-affair/receive-article/index.vue': {

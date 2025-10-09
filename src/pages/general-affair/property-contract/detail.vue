@@ -58,7 +58,7 @@ const detail = reactive({
   attachments: <FileAttachment[]>[]
 });
 
-Api.req('/purchase-contract/detail-for-view').query({ id }).success(data => {
+Api.req('/property-contract/detail-for-view').query({ id }).success(data => {
   coverReactive(detail, data);
 }).get();
 
@@ -88,6 +88,6 @@ Api.req('/purchase-contract/detail-for-view').query({ id }).success(data => {
 </style>
 <route lang="json5">
 {
-  name: 'PurchaseContractDetail'
+  name: 'PropertyContractDetail'
 }
 </route>

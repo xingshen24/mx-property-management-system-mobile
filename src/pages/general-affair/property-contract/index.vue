@@ -1,8 +1,8 @@
 <template>
-  <van-search v-model="keywords" placeholder="请输入合同名称/编号" input-align="center" @search="setKeywordsAndSearch" />
+  <van-search v-model="keywords" placeholder="请输入合同名称" input-align="center" @search="setKeywordsAndSearch" />
   <van-list v-model:loading="loading" :finished="finished" finished-text="没有更多了" @load="onLoad">
     <van-cell v-for="item in list" :key="item.id" :title="letterTitle(item)" is-link
-      :url="`purchase-contract/detail?id=${item.id}`" />
+      :url="`property-contract/detail?id=${item.id}`" />
   </van-list>
 </template>
 
@@ -33,7 +33,7 @@ function setKeywordsAndSearch() {
 function search(reset: boolean) {
   loading.value = true
   const param = { ...form }
-  Api.req('/purchase-contract/query').query(param).success((data: any[]) => {
+  Api.req('/property-contract/query').query(param).success((data: any[]) => {
     data = data ?? []
     if (data.length < param.size) {
       finished.value = true
@@ -55,6 +55,6 @@ function onLoad() {
 
 <route lang="json5">
 {
-  name: 'PurchaseContractManagement'
+  name: 'PropertyContractManagement'
 }
 </route>
