@@ -9,13 +9,14 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     Chart: typeof import('./../components/Chart/index.vue')['default']
-    copy: typeof import('./../components/VanDateField copy.vue')['default']
+    copy: typeof import('./../components/VanSelector copy.vue')['default']
     FileAttachments: typeof import('./../components/FileAttachments.vue')['default']
     GhostButton: typeof import('./../components/GhostButton.vue')['default']
     NavBar: typeof import('./../components/NavBar.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     TabBar: typeof import('./../components/TabBar.vue')['default']
+    VanBizObjectSelector: typeof import('./../components/VanBizObjectSelector.vue')['default']
     VanButton: typeof import('vant/es')['Button']
     VanCascader: typeof import('vant/es')['Cascader']
     VanCell: typeof import('vant/es')['Cell']

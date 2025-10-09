@@ -59,6 +59,9 @@ declare module 'vue-router/auto-routes' {
     'PurchaseContractDetail': RouteRecordInfo<'PurchaseContractDetail', '/general-affair/purchase-contract/detail', Record<never, never>, Record<never, never>>,
     'ReceiveArticle': RouteRecordInfo<'ReceiveArticle', '/general-affair/receive-article', Record<never, never>, Record<never, never>>,
     'ReceiveArticleDetail': RouteRecordInfo<'ReceiveArticleDetail', '/general-affair/receive-article/detail', Record<never, never>, Record<never, never>>,
+    'SealBorrowManagement': RouteRecordInfo<'SealBorrowManagement', '/general-affair/seal-borrow', Record<never, never>, Record<never, never>>,
+    'SealBorrowDetail': RouteRecordInfo<'SealBorrowDetail', '/general-affair/seal-borrow/detail', Record<never, never>, Record<never, never>>,
+    'SealBorrowForm': RouteRecordInfo<'SealBorrowForm', '/general-affair/seal-borrow/form', Record<never, never>, Record<never, never>>,
     'TargetResponsibilityLetter': RouteRecordInfo<'TargetResponsibilityLetter', '/general-affair/target-responsibility-letter', Record<never, never>, Record<never, never>>,
     'MyTargetResponsibilityLetterDetail': RouteRecordInfo<'MyTargetResponsibilityLetterDetail', '/general-affair/target-responsibility-letter/detail', Record<never, never>, Record<never, never>>,
     'Home': RouteRecordInfo<'Home', '/home', Record<never, never>, Record<never, never>>,
@@ -267,6 +270,18 @@ declare module 'vue-router/auto-routes' {
     }
     'src/pages/general-affair/receive-article/detail.vue': {
       routes: 'ReceiveArticleDetail'
+      views: never
+    }
+    'src/pages/general-affair/seal-borrow/index.vue': {
+      routes: 'SealBorrowManagement'
+      views: never
+    }
+    'src/pages/general-affair/seal-borrow/detail.vue': {
+      routes: 'SealBorrowDetail'
+      views: never
+    }
+    'src/pages/general-affair/seal-borrow/form.vue': {
+      routes: 'SealBorrowForm'
       views: never
     }
     'src/pages/general-affair/target-responsibility-letter/index.vue': {

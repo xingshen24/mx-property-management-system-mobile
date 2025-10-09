@@ -11,7 +11,7 @@
           :rules="[{ required: true, message: '请填写借阅目的' }]" />
         <van-department v-model="form.lenderDeptId" label="出借部门" placeholder="请选择出借部门" title="请选择出借部门" />
         <van-employee v-model="form.lenderEmpId" label="出借人" placeholder="请选择出借人" title="请选择出借人" />
-        <van-selector v-model="form.borrowType" label="借阅方式" title="请选择借阅方式" :state-object="BorrowDocumentType"
+        <ector v-model="form.borrowType" label="借阅方式" title="请选择借阅方式" :state-object="BorrowDocumentType"
           placeholder="请选择借阅方式" />
         <van-date-field v-model="form.expectReturnDate" name="expectReturnDate" label="归还日期" placeholder="请选择预期归还日期"
           title="请选择预期归还日期" />
