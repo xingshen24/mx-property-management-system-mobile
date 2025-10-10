@@ -56,6 +56,6 @@ function onLoad() {
 
 <route lang="json5">
 {
-  name: 'MyDepartmentAddressBook'
+  name: 'MyDepartmentEmployee'
 }
 </route>

@@ -47,6 +47,9 @@ declare module 'vue-router/auto-routes' {
     'EntertainManagement': RouteRecordInfo<'EntertainManagement', '/general-affair/entertain', Record<never, never>, Record<never, never>>,
     'EntertainDetail': RouteRecordInfo<'EntertainDetail', '/general-affair/entertain/detail', Record<never, never>, Record<never, never>>,
     'EntertainForm': RouteRecordInfo<'EntertainForm', '/general-affair/entertain/form', Record<never, never>, Record<never, never>>,
+    'MealExpenseManagement': RouteRecordInfo<'MealExpenseManagement', '/general-affair/meal-expense', Record<never, never>, Record<never, never>>,
+    'MealExpenseDetail': RouteRecordInfo<'MealExpenseDetail', '/general-affair/meal-expense/detail', Record<never, never>, Record<never, never>>,
+    'MealExpenseForm': RouteRecordInfo<'MealExpenseForm', '/general-affair/meal-expense/form', Record<never, never>, Record<never, never>>,
     'MeetingManagement': RouteRecordInfo<'MeetingManagement', '/general-affair/meeting', Record<never, never>, Record<never, never>>,
     'MeetingDetail': RouteRecordInfo<'MeetingDetail', '/general-affair/meeting/detail', Record<never, never>, Record<never, never>>,
     'MonthMeeting': RouteRecordInfo<'MonthMeeting', '/general-affair/month-meeting', Record<never, never>, Record<never, never>>,
@@ -71,7 +74,7 @@ declare module 'vue-router/auto-routes' {
     'AddressBook': RouteRecordInfo<'AddressBook', '/human-resource/address-book', Record<never, never>, Record<never, never>>,
     'AddressBookDetail': RouteRecordInfo<'AddressBookDetail', '/human-resource/address-book/detail', Record<never, never>, Record<never, never>>,
     'AddressBookForm': RouteRecordInfo<'AddressBookForm', '/human-resource/address-book/form', Record<never, never>, Record<never, never>>,
-    'MyDepartmentAddressBook': RouteRecordInfo<'MyDepartmentAddressBook', '/human-resource/employee', Record<never, never>, Record<never, never>>,
+    'MyDepartmentEmployee': RouteRecordInfo<'MyDepartmentEmployee', '/human-resource/employee', Record<never, never>, Record<never, never>>,
     'EmployeeDetail': RouteRecordInfo<'EmployeeDetail', '/human-resource/employee/detail', Record<never, never>, Record<never, never>>,
     'EmployeeContract': RouteRecordInfo<'EmployeeContract', '/human-resource/employee-contract', Record<never, never>, Record<never, never>>,
     'EmployeeContractDetail': RouteRecordInfo<'EmployeeContractDetail', '/human-resource/employee-contract/detail', Record<never, never>, Record<never, never>>,
@@ -227,6 +230,18 @@ declare module 'vue-router/auto-routes' {
       routes: 'EntertainForm'
       views: never
     }
+    'src/pages/general-affair/meal-expense/index.vue': {
+      routes: 'MealExpenseManagement'
+      views: never
+    }
+    'src/pages/general-affair/meal-expense/detail.vue': {
+      routes: 'MealExpenseDetail'
+      views: never
+    }
+    'src/pages/general-affair/meal-expense/form.vue': {
+      routes: 'MealExpenseForm'
+      views: never
+    }
     'src/pages/general-affair/meeting/index.vue': {
       routes: 'MeetingManagement'
       views: never
@@ -324,7 +339,7 @@ declare module 'vue-router/auto-routes' {
       views: never
     }
     'src/pages/human-resource/employee/index.vue': {
-      routes: 'MyDepartmentAddressBook'
+      routes: 'MyDepartmentEmployee'
       views: never
     }
     'src/pages/human-resource/employee/detail.vue': {
