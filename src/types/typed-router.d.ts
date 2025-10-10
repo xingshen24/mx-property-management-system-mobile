@@ -55,6 +55,9 @@ declare module 'vue-router/auto-routes' {
     'MonthMeeting': RouteRecordInfo<'MonthMeeting', '/general-affair/month-meeting', Record<never, never>, Record<never, never>>,
     'OfficeMeetingResolution': RouteRecordInfo<'OfficeMeetingResolution', '/general-affair/office-meeting-resolution', Record<never, never>, Record<never, never>>,
     'OfficeMeetingResolutionDetail': RouteRecordInfo<'OfficeMeetingResolutionDetail', '/general-affair/office-meeting-resolution/detail', Record<never, never>, Record<never, never>>,
+    'ProjectManagement': RouteRecordInfo<'ProjectManagement', '/general-affair/project', Record<never, never>, Record<never, never>>,
+    'ComparativeSelectionDetail': RouteRecordInfo<'ComparativeSelectionDetail', '/general-affair/project/comparative-selection-detail', Record<never, never>, Record<never, never>>,
+    'ProjectDetail': RouteRecordInfo<'ProjectDetail', '/general-affair/project/inquiryDetail', Record<never, never>, Record<never, never>>,
     'PropertyContractManagement': RouteRecordInfo<'PropertyContractManagement', '/general-affair/property-contract', Record<never, never>, Record<never, never>>,
     'PropertyContractDetail': RouteRecordInfo<'PropertyContractDetail', '/general-affair/property-contract/detail', Record<never, never>, Record<never, never>>,
     'ProposalManagement': RouteRecordInfo<'ProposalManagement', '/general-affair/proposal', Record<never, never>, Record<never, never>>,
@@ -260,6 +263,18 @@ declare module 'vue-router/auto-routes' {
     }
     'src/pages/general-affair/office-meeting-resolution/detail.vue': {
       routes: 'OfficeMeetingResolutionDetail'
+      views: never
+    }
+    'src/pages/general-affair/project/index.vue': {
+      routes: 'ProjectManagement'
+      views: never
+    }
+    'src/pages/general-affair/project/comparative-selection-detail.vue': {
+      routes: 'ComparativeSelectionDetail'
+      views: never
+    }
+    'src/pages/general-affair/project/inquiryDetail.vue': {
+      routes: 'ProjectDetail'
       views: never
     }
     'src/pages/general-affair/property-contract/index.vue': {

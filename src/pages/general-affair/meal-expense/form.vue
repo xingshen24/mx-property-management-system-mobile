@@ -28,7 +28,7 @@
 import { Api } from '@/utils/request'
 import { uploadFile } from '@/utils/uploader'
 import { showDialog } from 'vant'
-import { stdFormatDate, stdFormatToDay } from '@/utils/formatTime'
+import { stdFormatDate } from '@/utils/formatTime'
 import { needInput } from '@/utils/rules'
 
 const files = ref([])
