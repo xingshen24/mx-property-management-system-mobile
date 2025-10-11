@@ -100,6 +100,8 @@ declare module 'vue-router/auto-routes' {
     'Login': RouteRecordInfo<'Login', '/login', Record<never, never>, Record<never, never>>,
     'MaterialSpecificationDocument': RouteRecordInfo<'MaterialSpecificationDocument', '/material/document', Record<never, never>, Record<never, never>>,
     'MaterialSpecificationDetail': RouteRecordInfo<'MaterialSpecificationDetail', '/material/document/detail', Record<never, never>, Record<never, never>>,
+    'MaterialSpecificationDocument': RouteRecordInfo<'MaterialSpecificationDocument', '/material/entry-order', Record<never, never>, Record<never, never>>,
+    'EntryOrderDetail': RouteRecordInfo<'EntryOrderDetail', '/material/entry-order/detail', Record<never, never>, Record<never, never>>,
     'PurchaseOrder': RouteRecordInfo<'PurchaseOrder', '/material/purchase-order', Record<never, never>, Record<never, never>>,
     'PurchaseOrderDetail': RouteRecordInfo<'PurchaseOrderDetail', '/material/purchase-order/detail', Record<never, never>, Record<never, never>>,
     'Mock': RouteRecordInfo<'Mock', '/mock', Record<never, never>, Record<never, never>>,
@@ -447,6 +449,14 @@ declare module 'vue-router/auto-routes' {
     }
     'src/pages/material/document/detail.vue': {
       routes: 'MaterialSpecificationDetail'
+      views: never
+    }
+    'src/pages/material/entry-order/index.vue': {
+      routes: 'MaterialSpecificationDocument'
+      views: never
+    }
+    'src/pages/material/entry-order/detail.vue': {
+      routes: 'EntryOrderDetail'
       views: never
     }
     'src/pages/material/purchase-order/index.vue': {
