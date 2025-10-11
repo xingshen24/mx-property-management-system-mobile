@@ -4,12 +4,13 @@
     <van-cell-group inset>
       <van-cell title="编号" :value="detail.orderNo" />
       <van-cell title="仓库" :value="detail.warehouseName" />
-      <van-cell title="固定资产单" :value="detail.isAssets ? '是' : '否'" />
       <van-cell title="调拨仓库" v-if="detail.transfer" :value="detail.transferWarehouseName" />
       <van-cell title="申请部门" :value="detail.applyDeptName" />
       <van-cell title="申请用户" :value="detail.applyEmpName" />
       <van-cell title="申请日期" :value="detail.applyDate" />
       <van-cell title="用途" :value="detail.purpose" />
+      <van-cell title="申请原因" :value="detail.reason" />
+      <van-cell title="评估意见" :value="detail.assessment" />
       <van-cell title="总计金额" :value="detail.totalAmount + '元'" />
       <van-cell title="总计条目数" :value="detail.totalItem + '条'" />
       <van-cell title="总件数" :value="detail.totalCount + '件'" />
@@ -18,7 +19,7 @@
       <van-cell title="验收单" v-if="detail.acceptanceOrderNo != null" :value="detail.acceptanceOrderNo" />
       <van-cell title="备注" :value="detail.remark" />
     </van-cell-group>
-    <div class="data-label data-label-not-top">采购单明细</div>
+    <div class="data-label data-label-not-top">明细</div>
     <van-cell-group inset>
       <van-cell v-for="item in detail.items" :key="item.id" :title="item.materialName + ' - ' + item.specificationName">
         <template #default>
@@ -27,12 +28,15 @@
         </template>
       </van-cell>
     </van-cell-group>
+    <div class="data-label data-label-not-top">附件信息</div>
+    <file-attachments :files="detail.attachments" />
   </div>
 </template>
-<script setup lang="ts" name="PurchaseOrderDetail">
+<script setup lang="ts" name="AssetsPurchaseOrderDetail">
+import type { FileAttachment } from '@/components/fileAttachments';
 import { coverReactive } from '@/utils/common';
 import { Api } from '@/utils/request';
-import { GetPurchaseOrderAcceptStateName, type PurchaseOrderItem } from './purchase';
+import { GetPurchaseOrderAcceptStateName, type PurchaseOrderItem } from '../purchase-order/purchase';
 import { GetGeneralProcessStateName } from '@/pages/approval/approval';
 
 const route = useRoute();
@@ -63,7 +67,10 @@ const detail = reactive({
   acceptanceOrderId: <number | null>null,
   acceptanceOrderNo: '',
   remark: '',
-  items: <PurchaseOrderItem[]>[]
+  items: <PurchaseOrderItem[]>[],
+  reason: '',
+  assessment: '',
+  attachments: <FileAttachment[]>[]
 });
 
 const formatItem = (item: PurchaseOrderItem) => {
@@ -74,7 +81,7 @@ const formatItem = (item: PurchaseOrderItem) => {
   }
 }
 
-Api.req('/purchase-order/detail-for-view').query({ id }).success(data => {
+Api.req('/assets-purchase-order/detail-for-view').query({ id }).success(data => {
   coverReactive(detail, data);
 }).get();
 
@@ -104,6 +111,6 @@ Api.req('/purchase-order/detail-for-view').query({ id }).success(data => {
 </style>
 <route lang="json5">
 {
-  name: 'PurchaseOrderDetail'
+  name: 'AssetsPurchaseOrderDetail'
 }
 </route>

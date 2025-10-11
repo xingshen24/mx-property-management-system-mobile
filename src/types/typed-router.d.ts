@@ -98,6 +98,8 @@ declare module 'vue-router/auto-routes' {
     'TalentPoolCandidateDetail': RouteRecordInfo<'TalentPoolCandidateDetail', '/human-resource/talent-pool/detail', Record<never, never>, Record<never, never>>,
     'KeepAlive': RouteRecordInfo<'KeepAlive', '/keepalive', Record<never, never>, Record<never, never>>,
     'Login': RouteRecordInfo<'Login', '/login', Record<never, never>, Record<never, never>>,
+    'AssetsPurchaseOrder': RouteRecordInfo<'AssetsPurchaseOrder', '/material/assets-purchase-order', Record<never, never>, Record<never, never>>,
+    'AssetsPurchaseOrderDetail': RouteRecordInfo<'AssetsPurchaseOrderDetail', '/material/assets-purchase-order/detail', Record<never, never>, Record<never, never>>,
     'DeliveryOrder': RouteRecordInfo<'DeliveryOrder', '/material/delivery-order', Record<never, never>, Record<never, never>>,
     'DeliveryOrderDetail': RouteRecordInfo<'DeliveryOrderDetail', '/material/delivery-order/detail', Record<never, never>, Record<never, never>>,
     'MaterialSpecificationDocument': RouteRecordInfo<'MaterialSpecificationDocument', '/material/document', Record<never, never>, Record<never, never>>,
@@ -445,6 +447,14 @@ declare module 'vue-router/auto-routes' {
     }
     'src/pages/login/index.vue': {
       routes: 'Login'
+      views: never
+    }
+    'src/pages/material/assets-purchase-order/index.vue': {
+      routes: 'AssetsPurchaseOrder'
+      views: never
+    }
+    'src/pages/material/assets-purchase-order/detail.vue': {
+      routes: 'AssetsPurchaseOrderDetail'
       views: never
     }
     'src/pages/material/delivery-order/index.vue': {

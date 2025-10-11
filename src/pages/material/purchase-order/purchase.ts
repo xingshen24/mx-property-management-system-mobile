@@ -5,11 +5,28 @@ const ACCEPTED = { code: 50, name: '已验收' }
 
 export const PurchaseOrderAcceptState = { UNACCEPTED, IN_ACCEPT, CANCEL_ACCEPT, ACCEPTED }
 const PurchaseOrderAcceptStateMap = new Map<number, string>()
-for(const entry of Object.entries(PurchaseOrderAcceptState)){
+for (const entry of Object.entries(PurchaseOrderAcceptState)) {
   const t = entry[1]
   PurchaseOrderAcceptStateMap.set(t.code, t.name)
 }
 
 export const GetPurchaseOrderAcceptStateName = (code: number) => {
   return PurchaseOrderAcceptStateMap.get(code) ?? ''
+}
+
+export interface PurchaseOrderItem {
+  id: number;
+  orderId: number;
+  orderNo: string;
+  materialId: number;
+  materialName: string;
+  specificationId: number;
+  unit: string;
+  specificationName: string;
+  specification: string;
+  number: number;
+  price: number;
+  totalAmount: number;
+  purposeDictId: number;
+  remark: string;
 }
