@@ -98,6 +98,10 @@ declare module 'vue-router/auto-routes' {
     'TalentPoolCandidateDetail': RouteRecordInfo<'TalentPoolCandidateDetail', '/human-resource/talent-pool/detail', Record<never, never>, Record<never, never>>,
     'KeepAlive': RouteRecordInfo<'KeepAlive', '/keepalive', Record<never, never>, Record<never, never>>,
     'Login': RouteRecordInfo<'Login', '/login', Record<never, never>, Record<never, never>>,
+    'MaterialSpecificationDocument': RouteRecordInfo<'MaterialSpecificationDocument', '/material/document', Record<never, never>, Record<never, never>>,
+    'MaterialSpecificationDetail': RouteRecordInfo<'MaterialSpecificationDetail', '/material/document/detail', Record<never, never>, Record<never, never>>,
+    'PurchaseOrder': RouteRecordInfo<'PurchaseOrder', '/material/purchase-order', Record<never, never>, Record<never, never>>,
+    'PurchaseOrderDetail': RouteRecordInfo<'PurchaseOrderDetail', '/material/purchase-order/detail', Record<never, never>, Record<never, never>>,
     'Mock': RouteRecordInfo<'Mock', '/mock', Record<never, never>, Record<never, never>>,
     'Profile': RouteRecordInfo<'Profile', '/profile', Record<never, never>, Record<never, never>>,
     'ScrollCache': RouteRecordInfo<'ScrollCache', '/scroll-cache', Record<never, never>, Record<never, never>>,
@@ -435,6 +439,22 @@ declare module 'vue-router/auto-routes' {
     }
     'src/pages/login/index.vue': {
       routes: 'Login'
+      views: never
+    }
+    'src/pages/material/document/index.vue': {
+      routes: 'MaterialSpecificationDocument'
+      views: never
+    }
+    'src/pages/material/document/detail.vue': {
+      routes: 'MaterialSpecificationDetail'
+      views: never
+    }
+    'src/pages/material/purchase-order/index.vue': {
+      routes: 'PurchaseOrder'
+      views: never
+    }
+    'src/pages/material/purchase-order/detail.vue': {
+      routes: 'PurchaseOrderDetail'
       views: never
     }
     'src/pages/mock/index.vue': {
