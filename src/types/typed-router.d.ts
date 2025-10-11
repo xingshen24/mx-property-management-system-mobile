@@ -104,6 +104,8 @@ declare module 'vue-router/auto-routes' {
     'MaterialSpecificationDetail': RouteRecordInfo<'MaterialSpecificationDetail', '/material/document/detail', Record<never, never>, Record<never, never>>,
     'EntryOrder': RouteRecordInfo<'EntryOrder', '/material/entry-order', Record<never, never>, Record<never, never>>,
     'EntryOrderDetail': RouteRecordInfo<'EntryOrderDetail', '/material/entry-order/detail', Record<never, never>, Record<never, never>>,
+    'InventoryManagement': RouteRecordInfo<'InventoryManagement', '/material/inventory', Record<never, never>, Record<never, never>>,
+    'InventoryDetail': RouteRecordInfo<'InventoryDetail', '/material/inventory/detail', Record<never, never>, Record<never, never>>,
     'PurchaseOrder': RouteRecordInfo<'PurchaseOrder', '/material/purchase-order', Record<never, never>, Record<never, never>>,
     'PurchaseOrderDetail': RouteRecordInfo<'PurchaseOrderDetail', '/material/purchase-order/detail', Record<never, never>, Record<never, never>>,
     'Mock': RouteRecordInfo<'Mock', '/mock', Record<never, never>, Record<never, never>>,
@@ -467,6 +469,14 @@ declare module 'vue-router/auto-routes' {
     }
     'src/pages/material/entry-order/detail.vue': {
       routes: 'EntryOrderDetail'
+      views: never
+    }
+    'src/pages/material/inventory/index.vue': {
+      routes: 'InventoryManagement'
+      views: never
+    }
+    'src/pages/material/inventory/detail.vue': {
+      routes: 'InventoryDetail'
       views: never
     }
     'src/pages/material/purchase-order/index.vue': {
