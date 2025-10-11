@@ -106,6 +106,8 @@ declare module 'vue-router/auto-routes' {
     'MaterialSpecificationDetail': RouteRecordInfo<'MaterialSpecificationDetail', '/material/document/detail', Record<never, never>, Record<never, never>>,
     'EntryOrder': RouteRecordInfo<'EntryOrder', '/material/entry-order', Record<never, never>, Record<never, never>>,
     'EntryOrderDetail': RouteRecordInfo<'EntryOrderDetail', '/material/entry-order/detail', Record<never, never>, Record<never, never>>,
+    'FixedAssetsManagement': RouteRecordInfo<'FixedAssetsManagement', '/material/fixed-assets', Record<never, never>, Record<never, never>>,
+    'FixedAssetsDetail': RouteRecordInfo<'FixedAssetsDetail', '/material/fixed-assets/detail', Record<never, never>, Record<never, never>>,
     'InventoryManagement': RouteRecordInfo<'InventoryManagement', '/material/inventory', Record<never, never>, Record<never, never>>,
     'InventoryDetail': RouteRecordInfo<'InventoryDetail', '/material/inventory/detail', Record<never, never>, Record<never, never>>,
     'PurchaseOrder': RouteRecordInfo<'PurchaseOrder', '/material/purchase-order', Record<never, never>, Record<never, never>>,
@@ -479,6 +481,14 @@ declare module 'vue-router/auto-routes' {
     }
     'src/pages/material/entry-order/detail.vue': {
       routes: 'EntryOrderDetail'
+      views: never
+    }
+    'src/pages/material/fixed-assets/index.vue': {
+      routes: 'FixedAssetsManagement'
+      views: never
+    }
+    'src/pages/material/fixed-assets/detail.vue': {
+      routes: 'FixedAssetsDetail'
       views: never
     }
     'src/pages/material/inventory/index.vue': {
