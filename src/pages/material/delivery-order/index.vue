@@ -1,14 +1,14 @@
 <template>
-  <van-search v-model="keywords" placeholder="请输入入库单号/仓库" input-align="center" @search="setKeywordsAndSearch" />
+  <van-search v-model="keywords" placeholder="请输入出库单号/仓库" input-align="center" @search="setKeywordsAndSearch" />
   <van-list v-model:loading="loading" :finished="finished" finished-text="没有更多了" @load="onLoad">
     <van-cell v-for="item in list" :key="item.id" :title="documentTitle(item)" is-link
-      :url="`entry-order/detail?id=${item.id}`" />
+      :url="`delivery-order/detail?id=${item.id}`" />
   </van-list>
 </template>
 
 <script lang="ts" setup>
 import { Api } from '@/utils/request'
-import { GetEntryOrderTypeName } from './entryOrder'
+import { GetDeliveryOrderTypeName } from './delivery'
 
 const list = ref([])
 const finished = ref(false)
@@ -21,7 +21,7 @@ const form = reactive({
 })
 
 const documentTitle = (item: any) => {
-  return `【${item.warehouseName}】【${GetEntryOrderTypeName(item.orderType)}】${item.orderNo}`;
+  return `【${item.warehouseName}】【${GetDeliveryOrderTypeName(item.orderType)}】${item.orderNo}`;
 }
 
 function setKeywordsAndSearch() {
@@ -34,7 +34,7 @@ function setKeywordsAndSearch() {
 function search(reset: boolean) {
   loading.value = true
   const param = { ...form }
-  Api.req('/entry-order/query').query(param).success((data: any[]) => {
+  Api.req('/delivery-order/query').query(param).success((data: any[]) => {
     data = data ?? []
     if (data.length < param.size) {
       finished.value = true
@@ -56,6 +56,6 @@ function onLoad() {
 
 <route lang="json5">
 {
-  name: 'EntryOrder'
+  name: 'DeliveryOrder'
 }
 </route>
